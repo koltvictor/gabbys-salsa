@@ -16,7 +16,7 @@ export default function ProductList () {
                 {productList.map((product) => {
                     return(
                     <div key={product.id}>
-                        <img src={product.image} alt={product.name} /><br/>
+                        <img className="productImg" src={product.image} alt={product.name} /><br/>
                         {product.name}<br/>
                         {product.description}<br/>
                         {product.price}

@@ -1,18 +1,27 @@
 import './App.css';
 import Auth from './Auth';
+import UnAuth from './UnAuth';
+import Header from './components/Header';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-// import React, { useState, useEffect } from 'react';
-// import { BrowserRouter as Router } from 'react-router-dom';
 
-
-function App() {
+export default function App() {
+  const [currentUser, setCurrentUser] = useState(null);
   return (
-    <div>
-      <Auth />
-
-     
-    </div>
+      <Router>
+        {/* <Header /> */}
+        {/* {currentUser ? ( */}
+          <Auth />
+        {/* ) : ( */}
+          {/* <UnAuth /> */}
+          {/* )} */}
+      </Router>
   );
 }
 
-export default App;
+
+
+// currentUser={currentUser} setCurrentUser={setCurrentUser}
+
+// setCurrentUser={setCurrentUser}

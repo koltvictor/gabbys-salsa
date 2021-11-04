@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   
   namespace :api do 
 
-    resources :products, only: [:index, :show]
+    # resources :products, only: [:index, :show]
+
+    get '/products', to: 'products#index'
 
     resources :users, only: [:index, :show, :create, :update, :destroy]
 
