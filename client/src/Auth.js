@@ -1,6 +1,6 @@
 import './App.css';
 
-import React from 'react';
+import React, {useHistory} from 'react';
 import { Route, Switch } from 'react-router-dom';
 import ProductList from './components/ProductList';
 import About from './components/About'
@@ -12,10 +12,24 @@ import SignUp from './components/SignUp';
 import LogIn from './components/LogIn'
 
 export default function Auth({ currentUser, setCurrentUser }) {
+    // const history = useHistory();
+    // const handleLogout = () => {
+    //     fetch(`/api/logout`, {
+    //       method: 'DELETE',
+    //       credentials: 'include'
+    //     })
+    //       .then(res => {
+    //         if (res.ok) {
+    //           setCurrentUser(null)
+    //           history.push('/')
+    //         }
+    //       })
+    //   };
+    
 
     return (
     <div>
-        <Header />
+        <Header currentUser={currentUser}/>
         <Switch>
             <Route exact path="/">
                 <Home />
@@ -38,9 +52,9 @@ export default function Auth({ currentUser, setCurrentUser }) {
             <Route exact path="/signup">
                 <SignUp />
             </Route>
-            <Route exact path= "/logout">
+            {/* <Route exact path= "/logout">
                 <Logout currentUser={currentUser} setCurrentUser={setCurrentUser} />
-            </Route>
+            </Route> */}
             <Route path='/me'>
                 <Me currentUser={currentUser} />
             </Route>

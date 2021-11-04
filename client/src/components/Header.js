@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom'
 
 
-export default function Header() {
+export default function Header({currentUser}) {
     return (
         <div className="fullHeader">
             <div className="header">Gabby's Salsa</div>
+            <div className="welcome">Welcome {currentUser.name}</div>
             <div className="navigation"><br/>
                 <Link className="navLink" to="/">Home</Link>
                 <Link className="navLink" to="/products">Products</Link>

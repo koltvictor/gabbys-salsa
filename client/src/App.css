@@ -78,6 +78,13 @@
   font-size: 2rem;
 }
 
+.welcome{
+  background-color: #000;
+  text-align: center;
+  color: white;
+  padding-bottom: 1rem;
+}
+
 .productHeader{
   text-align: center;
   padding: 1rem;
