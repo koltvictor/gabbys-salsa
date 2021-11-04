@@ -6,13 +6,14 @@ export default function Header() {
         <div className="fullHeader">
             <div className="header">Gabby's Salsa</div>
             <div className="navigation"><br/>
-                <Link to="/">Home</Link>
-                <Link to="/products">Products</Link>
-                <Link to="/about">About</Link>
-                <Link to="/contact">Contact</Link>
-                <Link to="/faqs">FAQs</Link>
-                <Link to="/cart">Cart</Link>
-                <Link to="/logout">LogOut</Link>
+                <Link className="navLink" to="/">Home</Link>
+                <Link className="navLink" to="/products">Products</Link>
+                <Link className="navLink" to="/about">About</Link>
+                <Link className="navLink" to="/contact">Contact</Link>
+                <Link className="navLink" to="/faqs">FAQs</Link>
+                <Link className="navLink" to="/cart">Cart</Link>
+                <Link className="navLink" to="/orders">Order History</Link>
+                <Link className="navLink" to="/logout">LogOut</Link>
             </div>
             <div className="footer">
             </div>

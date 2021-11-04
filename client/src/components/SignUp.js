@@ -1,0 +1,103 @@
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom'
+
+export default function SignUp({ setCurrentUser}) {
+
+
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const [passwordConfirmation, setPasswordConfirmation] = useState('');
+    const [email, setEmail] = useState('');
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        fetch('/api/signup', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            username : username,
+            password : password,
+            email : email,
+            password_confirmation: passwordConfirmation
+        })
+        })
+        .then(res => {
+            if (res.ok) {
+            res.json().then(user => {
+                setCurrentUser(user)
+            })
+            } else {
+            res.json().then(errors => {
+                console.error(errors)
+            })
+            }
+        })
+    };
+    return(
+        <div>
+            <form onSubmit={handleSubmit}>
+                    <h1>Sign Up</h1>
+                    <p>
+                    <label className='label'>
+                        Username
+                    </label>
+                    <input
+                        type="text"
+                        name="username"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
+                        className="inputField"
+                    />
+                    </p>
+
+                    <p>
+                    <label className='label'>
+                        Email
+                    </label>
+                    <input
+                        type="text"
+                        name="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        className="inputField"
+                    />
+                    </p>
+
+                    <p>
+                    <label className='label'>
+                        Password
+                    </label>
+                    <input
+                        type="password"
+                        name=""
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        className="inputField"
+                    />
+                    </p>
+
+                    <p>
+                    <label className='label'>
+                        Confirm Password
+                    </label>
+                    <input
+                        type="password"
+                        name="password_confirmation"
+                        value={passwordConfirmation}
+                        onChange={(e) => setPasswordConfirmation(e.target.value)}
+                        className="inputField"
+                    />
+                    </p>
+
+                    <p><button type="submit">Sign Up</button></p>
+
+                    <p className="text-center">-- or --</p>
+
+                    <p className="text-center"><Link to="/api/login">Log In</Link></p>
+
+                </form>
+            
+        </div>
+    )
+}

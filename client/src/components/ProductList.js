@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 
+
 export default function ProductList () {
     const [productList, setProductList] = useState([])
 
@@ -11,15 +12,15 @@ export default function ProductList () {
 
     return (
         <div>
-            <h2>Product List</h2>
+            <div className="productHeader">Salsas available for purchase this week: </div>
             <div>
                 {productList.map((product) => {
                     return(
-                    <div key={product.id}>
+                    <div className="productCard" key={product.id}>
                         <img className="productImg" src={product.image} alt={product.name} /><br/>
                         {product.name}<br/>
                         {product.description}<br/>
-                        {product.price}
+                        ${product.price}
                     </div>
                     )}
                 )}

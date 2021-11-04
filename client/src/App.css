@@ -54,6 +54,10 @@
   padding-bottom: 1rem;
 }
 
+.navLink:visited{
+  color: white;
+}
+
 .homeImg {
   background-attachment: fixed;
   background-position: center;
@@ -74,6 +78,23 @@
   font-size: 2rem;
 }
 
+.productHeader{
+  text-align: center;
+  padding: 1rem;
+  color: rgb(113, 105, 255);
+  font-family: Noteworthy;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.productCard{
+  display: inline-block;
+  grid-gap: 1rem;
+  padding: 5px;
+  margin: 10px;
+  border-width: .5em;
+  text-align: center;
+}
 .productImg{
   height: 35%;
   width: 35%;

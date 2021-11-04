@@ -1,8 +1,7 @@
 class Api::UsersController < ApplicationController
     skip_before_action :confirm_auth
     def index
-        @users = User.all
-        render json: @users
+        render json: User.all, status: 200
     end
 
     def create 
