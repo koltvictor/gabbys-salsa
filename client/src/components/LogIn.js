@@ -6,8 +6,8 @@ export default function LogIn({ setCurrentUser }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-const handleSubmit = (event) => {
-    event.preventDefault()
+const handleSubmit = (e) => {
+    e.preventDefault()
     fetch('/api/login', {
       method: 'POST',
       headers: {
@@ -15,14 +15,14 @@ const handleSubmit = (event) => {
       },
       body: JSON.stringify({username, password})
     })
-      .then(res => {
-        if (res.ok) {
-          res.json().then(user => {
+      .then(r => {
+        if (r.ok) {
+          r.json().then(user => {
             setCurrentUser(user)
           })
         } else {
-          res.json().then(errors => {
-            console.error(errors)
+          r.json().then(errors => {
+            alert(errors.full_messages)
           })
         }
       })
@@ -63,7 +63,7 @@ const handleSubmit = (event) => {
           />
         </p>
         <p><button className="loginButton" type="submit">Log In</button></p>
-        <p className="text-center">-- or --</p>
+        <p className="text-center"></p>
 
         <p className="text-center"><Link className="loginButton" to="/api/signup">Sign Up</Link></p>
         </div>

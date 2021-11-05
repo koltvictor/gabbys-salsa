@@ -32,6 +32,8 @@ module GabbysSalsa
     # Use SameSite=Strict for all cookies to help protect against CSRF
     config.action_dispatch.cookies_same_site_protection = :strict
 
+    config.action_mailer.default_url_options = { host: "localhost", port: 3000 }
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files

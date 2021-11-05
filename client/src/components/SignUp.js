@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default function SignUp({ setCurrentUser}) {
 
-
+    const [name, setName] = useState('');
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [passwordConfirmation, setPasswordConfirmation] = useState('');
@@ -16,6 +16,7 @@ export default function SignUp({ setCurrentUser}) {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
+            name: name,
             username : username,
             password : password,
             email : email,
@@ -38,6 +39,16 @@ export default function SignUp({ setCurrentUser}) {
         <div>
             <form onSubmit={handleSubmit}>
                     <h1>Sign Up</h1>
+                    <p>
+                        <label>
+                            Name
+                        </label>
+                        <input 
+                        type="text" 
+                        name="name" 
+                        value={name} 
+                        onChange={e => setName(e.target.value)} />
+                    </p>
                     <p>
                     <label className='label'>
                         Username

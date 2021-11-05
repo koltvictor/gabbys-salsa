@@ -99,8 +99,9 @@
   grid-gap: 1rem;
   padding: 5px;
   margin: 10px;
-  border-width: .5em;
+  /* border-width: .5em; */
   text-align: center;
+  border-style: solid;
 }
 .productImg{
   height: 35%;

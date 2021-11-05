@@ -7,7 +7,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 export default function App() {
   const [currentUser, setCurrentUser] = useState(null);
-  const [authChecked, setAuthChecked] = useState(false);
+  const [authChecked, setAuthChecked] = useState(true);
 
   useEffect(() => {
     fetch('/api/me', {
@@ -25,7 +25,7 @@ export default function App() {
       })
   }, [setCurrentUser])
 
-  if(!authChecked) {return <div>NOPE!</div>}
+  if(!authChecked) {return <div>Try Logging In!</div>}
 
   return (
       <Router>

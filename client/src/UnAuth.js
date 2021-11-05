@@ -9,13 +9,13 @@ function UnAuth({ setCurrentUser }) {
     return (
       <div>
         <Switch>
-          <Route exact path="/cart">
+          <Route exact to="/api/login">
             <LogIn setCurrentUser={setCurrentUser} />
           </Route>
-          <Route exact path="/api/signup">
+          <Route exact to="/api/signup">
             <SignUp setCurrentUser={setCurrentUser}/>
           </Route>
-          <Redirect to="/" />
+          <Redirect exact to="/" />
         </Switch>
       </div>
     )

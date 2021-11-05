@@ -1,7 +1,8 @@
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 
 
-export default function Header({currentUser}) {
+export default function Header({currentUser, handleLogout}) {
+    let history = useHistory()
     return (
         <div className="fullHeader">
             <div className="header">Gabby's Salsa</div>
@@ -13,8 +14,8 @@ export default function Header({currentUser}) {
                 <Link className="navLink" to="/contact">Contact</Link>
                 <Link className="navLink" to="/faqs">FAQs</Link>
                 <Link className="navLink" to="/cart">Cart</Link>
-                <Link className="navLink" to="/orders">Order History</Link>
-                <Link className="navLink" to="/logout">LogOut</Link>
+                <Link className="navLink" to='/me' onClick={() => history.push('/me')}>My Account</Link>
+                <Link className="navLink" to='/' onClick={handleLogout}>Logout</Link>
             </div>
             <div className="footer">
             </div>
