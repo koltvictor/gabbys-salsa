@@ -1,6 +1,6 @@
 import './App.css';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
 import ProductList from './components/ProductList';
 import About from './components/About'
@@ -8,8 +8,6 @@ import Header from './components/Header'
 import Home from './components/Home'
 import Contact from './components/Contact'
 import Me from './components/Me'
-import SignUp from './components/SignUp';
-import LogIn from './components/LogIn'
 import Faqs from './components/Faqs'
 import Cart from './components/Cart'
 
@@ -17,17 +15,23 @@ export default function Auth({ currentUser, setCurrentUser }) {
     const [cartItems, setCartItems] = useState([])
     const history = useHistory();
 
-    function handleAddToCart(product){
-        const itemExist= cartItems.find(x => x.id === product.id)
-    
-        if (itemExist) {
-            setCartItems(cartItems.map(x=> x.id === product.id ? {...itemExist, qty: itemExist.qty + 1 } : x))
-        }
-        else {
-            setCartItems([...cartItems, {...product, qty:1}])
-        }
-        console.log("Item Added to Cart")
-    }
+    const [productList, setProductList] = useState([])
+
+    useEffect(() => {
+        fetch('http://localhost:4000/api/products')
+        .then((r) => r.json())
+        .then((data) => setProductList(data))
+    }, [])
+
+    function handleAddToCart(product) {
+      const itemExist= cartItems.find(x => x.id === product.id)
+      if (itemExist) {
+          setCartItems(cartItems.map(x=> x.id === product.id ? {...itemExist, qty: itemExist.qty + 1 } : x))
+      }
+      else {
+          setCartItems([...cartItems, {...product}])
+      }
+  }
 
     function handleRemoveFromCart(product){
         const itemExist = cartItems.find(x => x.id === product.id)
@@ -55,33 +59,30 @@ export default function Auth({ currentUser, setCurrentUser }) {
     
     return (
     <div>
-        <Header currentUser={currentUser} handleLogout={handleLogout}/>
+        <Header currentUser={currentUser} handleLogout={handleLogout} countCartItems = {cartItems.length}/>
         <Switch>
-            <Route exact to="/">
+            <Route exact path="/">
                 <Home />
             </Route>
-            <Route exact to="/products">
-                <ProductList currentUser={currentUser} />
+            <Route exact path="/products">
+                <ProductList currentUser={currentUser} 
+                handleAddToCart={handleAddToCart}
+                productList={productList}
+                cartItems={cartItems} />
             </Route>
-            <Route to="/about">
+            <Route exact path="/about">
                 <About />
             </Route>
-            <Route to="/contact">
+            <Route exact path="/contact">
                 <Contact />
             </Route>
-            <Route exact to="/FAQs">
+            <Route exact path="/FAQs">
                 <Faqs />
             </Route>
-            <Route exact to= "/login">
-                <LogIn setCurrentUser={setCurrentUser} />
+            <Route exact path='/me'>
+                <Me currentUser={currentUser} cartItems={cartItems}/>
             </Route>
-            <Route exact to="/signup">
-                <SignUp />
-            </Route>
-            <Route to='/me'>
-                <Me currentUser={currentUser} />
-            </Route>
-            <Route to='/cart'>
+            <Route exact path='/cart'>
                 <Cart cartItems={cartItems} handleAddToCart={handleAddToCart} handleRemoveFromCart={handleRemoveFromCart}/>
             </Route>
         </Switch>

@@ -2,10 +2,9 @@ import React from 'react';
 
 export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart}) {
     const itemsPrice = cartItems.reduce((a,c) => a + c.price * c.qty, 0)
-    const taxPrice = itemsPrice * .0813;
+    const taxPrice = itemsPrice * .0825;
     const shippingPrice = itemsPrice > 150 ? 0 : 18;
     const totalPrice = itemsPrice + taxPrice + shippingPrice;
-    console.log(cartItems)
 
     return(
             <div>
@@ -15,7 +14,7 @@ export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart})
                 </div>
                 {cartItems.map((item) => (
                     <div key={item.id}> 
-                        <img src={item.image} alt="kolt says so" height="50" width="50"></img>
+                        <img src={item.image} alt={item.name} height="50" width="50"></img>
                         <div>{item.name}</div>
                         <div className="addRemButtons">
                             <button onClick={()=>handleAddToCart(item)} className="add"> + </button>

@@ -3,6 +3,9 @@ import Auth from './Auth';
 import UnAuth from './UnAuth';
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
+// import SignUp from './components/SignUp';
+// import LogIn from './components/LogIn';
+
 
 
 export default function App() {
@@ -25,8 +28,9 @@ export default function App() {
       })
   }, [setCurrentUser])
 
-  if(!authChecked) {return <div>Try Logging In!</div>}
+  if(!authChecked) return <div>NOPE!</div>
 
+  
   return (
       <Router>
         {currentUser ? (
