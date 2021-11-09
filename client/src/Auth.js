@@ -29,7 +29,7 @@ export default function Auth({ currentUser, setCurrentUser }) {
           setCartItems(cartItems.map(x=> x.id === product.id ? {...itemExist, qty: itemExist.qty + 1 } : x))
       }
       else {
-          setCartItems([...cartItems, {...product}])
+          setCartItems([...cartItems, {...product, qty:1}])
       }
   }
 

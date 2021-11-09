@@ -36,7 +36,7 @@ export default function SignUp({ setCurrentUser}) {
         })
     };
     return(
-        <div>
+        <div className="signup">
             <form onSubmit={handleSubmit}>
                     <h1>Sign Up</h1>
                     <p>

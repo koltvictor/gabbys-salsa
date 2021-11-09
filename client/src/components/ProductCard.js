@@ -1,7 +1,6 @@
 import React from 'react';
 
 export default function ProductCard({product, handleAddToCart}) {
-    console.log(product)
 
     return(
         <div className="productCard">

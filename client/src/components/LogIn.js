@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import { Redirect, Link } from 'react-router-dom'
+import { Redirect, Link, useHistory } from 'react-router-dom'
 
 export default function LogIn({ setCurrentUser }) {
 
+  const history = useHistory();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -19,6 +20,7 @@ const handleSubmit = (e) => {
         if (r.ok) {
           r.json().then(user => {
             setCurrentUser(user)
+            history.push('/')
           })
         } else {
           r.json().then(errors => {
@@ -31,7 +33,7 @@ const handleSubmit = (e) => {
   return (
     <div className="login">
 
-      <Redirect to="/" />
+      {/* <Redirect to="/" /> */}
 
       <form onSubmit={handleSubmit}>
         
@@ -63,9 +65,8 @@ const handleSubmit = (e) => {
           />
         </p>
         <p><button className="loginButton" type="submit">Log In</button></p>
-        <p className="text-center"></p>
 
-        <p className="text-center"><Link className="loginButton" to="/api/signup">Sign Up</Link></p>
+        <p><Link className="loginButton" to="/signup">Sign Up</Link></p>
         </div>
         
 

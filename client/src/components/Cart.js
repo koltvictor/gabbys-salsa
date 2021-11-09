@@ -3,8 +3,9 @@ import React from 'react';
 export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart}) {
     const itemsPrice = cartItems.reduce((a,c) => a + c.price * c.qty, 0)
     const taxPrice = itemsPrice * .0825;
-    const shippingPrice = itemsPrice > 150 ? 0 : 18;
+    const shippingPrice = itemsPrice > 20 ? 0 : 18;
     const totalPrice = itemsPrice + taxPrice + shippingPrice;
+    console.log(cartItems.qty)
 
     return(
             <div>
@@ -13,21 +14,21 @@ export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart})
                     {cartItems.length === 0 && <div> Cart is Empty </div> }
                 </div>
                 {cartItems.map((item) => (
-                    <div key={item.id}> 
+                    <div key={item.id} className="cartItem"> 
                         <img src={item.image} alt={item.name} height="50" width="50"></img>
                         <div>{item.name}</div>
-                        <div className="addRemButtons">
-                            <button onClick={()=>handleAddToCart(item)} className="add"> + </button>
-                            <button onClick={()=>handleRemoveFromCart(item)} className="remove"> - </button>
+                        <div>
+                            <button onClick={()=>handleAddToCart(item)}> + </button>
+                            <button onClick={()=>handleRemoveFromCart(item)}> - </button>
                         </div>
-                        <div className="itemPrice">
+                        <div>
                             {item.qty} x ${item.price.toFixed(2)}
                         </div>
                     </div>
                 ))} 
             {cartItems.length !== 0 && (
-                <div className="checkout">
-                    <hr></hr>
+                <div>
+                    <hr />
                     <div>
                         <div>Items Price</div>
                         <div>${itemsPrice.toFixed(2)}</div>
@@ -40,7 +41,7 @@ export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart})
                         <div>${totalPrice.toFixed(2)}</div>
                     </div>
 
-                    <hr></hr> 
+                    <hr/> 
                     
                     <div>
                         <button>
