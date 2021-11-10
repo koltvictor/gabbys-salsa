@@ -8,6 +8,7 @@ export default function SignUp({ setCurrentUser}) {
     const [password, setPassword] = useState('');
     const [passwordConfirmation, setPasswordConfirmation] = useState('');
     const [email, setEmail] = useState('');
+    const [error, setError] = useState('');
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -30,7 +31,8 @@ export default function SignUp({ setCurrentUser}) {
             })
             } else {
             res.json().then(errors => {
-                console.error(errors)
+                setError()
+                console.log(errors)
             })
             }
         })
@@ -101,11 +103,13 @@ export default function SignUp({ setCurrentUser}) {
                     />
                     </p>
 
-                    <p><button type="submit">Sign Up</button></p>
+                    <p>{error}</p>
 
-                    <p className="text-center">-- or --</p>
+                    <p><button type="submit" className="loginButton">Sign Up</button></p>
 
-                    <p className="text-center"><Link to="/api/login">Log In</Link></p>
+                    <p>-- or --</p>
+
+                    <p><Link className="loginButton" to="/api/login">Log In</Link></p>
 
                 </form>
             

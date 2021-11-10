@@ -37,6 +37,43 @@
   }
 }
 
+.loginButton {
+  background-color: #61dafb;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.login{
+  text-align: center;
+  padding: 1rem;
+  background-color: #000;
+  color: hotpink;
+  font-family: Noteworthy;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius:2rem;
+  margin: 8rem;
+}
+
+.signup{
+  text-align: center;
+  padding: 1rem;
+  background-color: #000;
+  color: hotpink;
+  font-family: Noteworthy;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius:2rem;
+  margin: 8rem;
+}
+
 .header{
   text-align: center;
   padding: 1rem;
@@ -78,6 +115,30 @@
   font-size: 2rem;
 }
 
+.homePageText1 {
+  text-align: center;
+  padding: 1rem;
+  color: rgb(178, 3, 3);
+  font-family: Noteworthy;
+  font-size: 2rem;
+}
+
+.homePageText2 {
+  text-align: center;
+  padding: 1rem;
+  color: rgb(212, 80, 36);
+  font-family: Noteworthy;
+  font-size: 2rem;
+}
+
+.homePageText3 {
+  text-align: center;
+  padding: 1rem;
+  color: rgb(24, 168, 56);
+  font-family: Noteworthy;
+  font-size: 2rem;
+}
+
 .welcome{
   background-color: #000;
   text-align: center;
@@ -88,31 +149,76 @@
 .productHeader{
   text-align: center;
   padding: 1rem;
-  color: rgb(113, 105, 255);
+  color: rgb(105, 255, 113);
   font-family: Noteworthy;
   font-size: 2rem;
   font-weight: bold;
+}
+
+.productList{
+  background-color: rgba(59, 99, 207,.6);
+  text-align: center;
+  padding: 2rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  border-radius: 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6)
 }
 
 .productCard{
   display: inline-block;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 1rem;
-  padding: 5px;
+  padding: 2rem;
   margin: 10px;
-  border-width: .5em;
+  border-width: .1em;
   text-align: center;
   border-style: solid;
-}
-.productImg{
-  height: 3rem;
-  width: 3rem;
+  border-radius: 1rem;
+  background-color:white;  
 }
 
+.productImg{
+  height: 6rem;
+  width: 6rem;
+}
+
+.aboutHead{
+  font-family: Noteworthy;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: orange;
+}
+
+.aboutBody{
+  background-color: rgba(23, 152, 23, .6);
+  padding: 2rem;
+  color: white;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  border-radius: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6)
+}
+
+.contactHead{
+  font-family: Noteworthy;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(0, 34, 255);
+}
 .contactForm{
   text-align: center;
-  padding: 5rem;
-  background-color: rgba(165, 60, 60, .6);
+  padding: 2rem;
+  background-color: rgba(198, 23, 23, .6);
+  margin-left: 4rem;
+  margin-right: 4rem;
+  border-radius:2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6);
+  color:white;
 }
 
 .contactInput{
@@ -124,37 +230,66 @@
   font-weight: bold;
 }
 
-.login{
-  text-align: center;
-  padding: 1rem;
-  background-color: #000;
-  color: hotpink;
+.faqsHead{
   font-family: Noteworthy;
+  text-align: center;
   font-size: 2rem;
   font-weight: bold;
-  border-radius:2rem;
-  margin: 8rem;
+  color: rgb(230, 0, 255);
 }
 
-.signup{
-  text-align: center;
-  padding: 1rem;
-  background-color: #000;
-  color: hotpink;
+.faqsBody{
+  background-color: rgba(255, 0, 0, .6);
+  padding: 2rem;
+  color: white;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  border-radius: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6)
+}
+
+.cartHeader{
   font-family: Noteworthy;
+  text-align: center;
   font-size: 2rem;
   font-weight: bold;
-  border-radius:2rem;
-  margin: 8rem;
+  color: rgba(59, 59, 224, .6);
 }
-
 .cartItem{
   display: inline-block;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 1rem;
   padding: 5px;
   margin: 10px;
-  border-width: .5em;
+  border-width: .1em;
   text-align: center;
-  border-style: solid;
+  padding: .25rem;
+}
+
+.emptyCart{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  padding: 6rem;
+}
+
+.checkoutStart{
+  text-align: left;
+  margin-left: 2rem;
+  padding-top: 1rem;
+}
+
+.checkoutEnd{
+  text-align: right;
+  margin-right: 2rem;
+}
+
+.accountHead{
+  font-family: Noteworthy;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(255, 0, 0);
 }

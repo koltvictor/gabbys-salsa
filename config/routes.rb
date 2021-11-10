@@ -1,13 +1,16 @@
 Rails.application.routes.draw do
   
+  # resources :orders
   namespace :api do 
 
     resources :products, only: [:index, :show]
 
-    # get '/products', to: 'products#index'
-
     resources :users, only: [:index, :show, :create, :update, :destroy]
 
+    get '/cart', to: 'orders#index'
+    
+    post '/cart', to: 'orders#create'
+    
     get '/me', to: 'users#show'
 
     post '/signup', to: 'users#create'

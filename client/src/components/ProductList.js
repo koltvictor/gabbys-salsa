@@ -10,17 +10,15 @@ export default function ProductList ({productList, handleAddToCart}) {
                 key={product.id}
                 product={product} 
                 handleAddToCart={handleAddToCart} />
-            // <img className="productImg" src={product.image} alt={product.name} /><br/>
-            // {product.name}<br/>
-            // {product.description}<br/>
-            // ${product.price}<br/>
             
         )})
 
     return (
         <div>
             <div className="productHeader">Salsas available for purchase this week: </div>
-            {product}
+            <div className="productList">
+                {product}
+            </div>
         </div>
     )
 }

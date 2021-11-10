@@ -12,7 +12,8 @@ export default function Contact() {
         e.target.reset();
     }
     return (
-        <div className="contactForm">
+        <div>
+            <h1 className="contactHead">Contact Form</h1>
             <form className="contactForm" onSubmit={sendEmail}>
                 <input className="contactInput" type="hidden" name="contact_number" /><br/>
                 <label className="contactInputLabel">Name</label>

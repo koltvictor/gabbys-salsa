@@ -1,33 +1,38 @@
 import React from 'react';
 
-export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart}) {
+
+export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, currentUser, handleCheckout}) {
+    
     const itemsPrice = cartItems.reduce((a,c) => a + c.price * c.qty, 0)
     const taxPrice = itemsPrice * .0825;
-    const shippingPrice = itemsPrice > 20 ? 0 : 18;
+    const shippingPrice = cartItems < 7 ? 0 : 20;
     const totalPrice = itemsPrice + taxPrice + shippingPrice;
-    console.log(cartItems.qty)
+
+
 
     return(
-            <div>
-                <h2 className="cart">Shopping Cart</h2>
+            <div className="checkoutStart">
+                <h1 className="cartHeader">{currentUser.name}'s Cart</h1>
                 <div className="emptyCart">
-                    {cartItems.length === 0 && <div> Cart is Empty </div> }
+                    {cartItems.length === 0 && <div className="emptyCart"> Cart is Empty </div> }
                 </div>
                 {cartItems.map((item) => (
                     <div key={item.id} className="cartItem"> 
                         <img src={item.image} alt={item.name} height="50" width="50"></img>
+                        <br/><br/>
                         <div>{item.name}</div>
+                        <br/>
                         <div>
                             <button onClick={()=>handleAddToCart(item)}> + </button>
                             <button onClick={()=>handleRemoveFromCart(item)}> - </button>
-                        </div>
+                        </div><br/>
                         <div>
                             {item.qty} x ${item.price.toFixed(2)}
                         </div>
                     </div>
                 ))} 
             {cartItems.length !== 0 && (
-                <div>
+                <div className="checkoutEnd">
                     <hr />
                     <div>
                         <div>Items Price</div>
@@ -44,7 +49,7 @@ export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart})
                     <hr/> 
                     
                     <div>
-                        <button>
+                        <button onClick={handleCheckout}>
                             Checkout
                         </button>
                     </div>       

@@ -13,6 +13,7 @@ import Cart from './components/Cart'
 
 export default function Auth({ currentUser, setCurrentUser }) {
     const [cartItems, setCartItems] = useState([])
+    const [order, setOrder] = useState([])
     const history = useHistory();
 
     const [productList, setProductList] = useState([])
@@ -43,6 +44,15 @@ export default function Auth({ currentUser, setCurrentUser }) {
           setCartItems(cartItems.map(x=> x.id === product.id ? {...itemExist, qty: itemExist.qty - 1 } : x))
         }
       }
+
+      function handleCheckout() {
+        fetch(`/api/cart`, {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(cartItems)})
+            .then(resp => resp.json())
+            .then(() => setOrder()
+            )}
 
     const handleLogout = () => {
         fetch(`/api/logout`, {
@@ -80,10 +90,19 @@ export default function Auth({ currentUser, setCurrentUser }) {
                 <Faqs />
             </Route>
             <Route exact path='/me'>
-                <Me currentUser={currentUser} cartItems={cartItems}/>
+                <Me 
+                currentUser={currentUser}
+                cartItems={cartItems}
+                order={order}
+                />
             </Route>
             <Route exact path='/cart'>
-                <Cart cartItems={cartItems} handleAddToCart={handleAddToCart} handleRemoveFromCart={handleRemoveFromCart}/>
+                <Cart cartItems={cartItems} 
+                handleAddToCart={handleAddToCart} 
+                handleRemoveFromCart={handleRemoveFromCart}
+                currentUser={currentUser}
+                handleCheckout={handleCheckout}
+                />
             </Route>
         </Switch>
     </div>

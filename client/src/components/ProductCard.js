@@ -2,6 +2,7 @@ import React from 'react';
 
 export default function ProductCard({product, handleAddToCart}) {
 
+
     return(
         <div className="productCard">
                 <img className="productImg" src={product.image} alt={product.name} /><br/>

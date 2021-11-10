@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Redirect, Link, useHistory } from 'react-router-dom'
 
+
 export default function LogIn({ setCurrentUser }) {
 
   const history = useHistory();
@@ -32,9 +33,7 @@ const handleSubmit = (e) => {
 
   return (
     <div className="login">
-
-      {/* <Redirect to="/" /> */}
-
+      <Redirect to='/' />
       <form onSubmit={handleSubmit}>
         
         <h1 className="loginHeader">Log In</h1>
@@ -64,9 +63,11 @@ const handleSubmit = (e) => {
             className="inputField"
           />
         </p>
-        <p><button className="loginButton" type="submit">Log In</button></p>
-
-        <p><Link className="loginButton" to="/signup">Sign Up</Link></p>
+        <button className="loginButton" type="submit">Log In</button>
+        <br/><br/>
+        <hr/>
+        <br/>
+        <Link className="loginButton" to="/signup">Sign Up</Link><br/><br/>
         </div>
         
 
