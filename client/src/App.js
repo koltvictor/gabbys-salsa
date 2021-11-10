@@ -10,7 +10,8 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 export default function App() {
   const [currentUser, setCurrentUser] = useState(null);
-  const [authChecked, setAuthChecked] = useState(true);
+  const [authChecked, setAuthChecked] = useState(false);
+  const [orders, setOrders] = useState([]);
 
   useEffect(() => {
     fetch('/api/me', {
@@ -21,9 +22,10 @@ export default function App() {
           res.json().then((user) => {
             setCurrentUser(user)
             setAuthChecked(true)
+            setOrders(user.orders)
           })
         } else {
-          setAuthChecked(true)
+          setAuthChecked(false)
         }
       })
   }, [setCurrentUser])
@@ -37,6 +39,8 @@ export default function App() {
           <Auth
             setCurrentUser={setCurrentUser}
             currentUser={currentUser}
+            orders={setOrders}
+            // setOrders={setOrders}
           />
         ) : (
           <UnAuth

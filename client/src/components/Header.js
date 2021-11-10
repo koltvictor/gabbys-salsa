@@ -13,7 +13,7 @@ export default function Header({currentUser, handleLogout, countCartItems}) {
                 <Link className="navLink" to="/about">About</Link>
                 <Link className="navLink" to="/contact">Contact</Link>
                 <Link className="navLink" to="/faqs">FAQs</Link>
-                <Link className="navLink" to="/cart">Cart ({countCartItems}) items</Link>
+                <Link className="navLink" to="/cart">🛒({countCartItems}) items in cart</Link>
                 <Link className="navLink" to='/me' onClick={() => history.push('/me')}>My Account</Link>
                 <Link className="navLink" to='/' onClick={handleLogout}>Logout</Link>
             </div>

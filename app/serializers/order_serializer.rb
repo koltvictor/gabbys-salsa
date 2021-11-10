@@ -1,4 +1,4 @@
 class OrderSerializer < ActiveModel::Serializer
-  attributes :id, :date
+  attributes :id
   has_one :user
 end

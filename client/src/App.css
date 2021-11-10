@@ -107,10 +107,19 @@
   align-items: center;
 }
 
+.homePageTextWrapper {
+  background-color: rgba(0, 0, 0, .9);
+  border-radius: 4rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  box-shadow: 0 4px 8px 0 black;
+}
+
 .homePageText {
   text-align: center;
   padding: 1rem;
-  color: rgb(41, 32, 37);
+  padding-bottom: 2rem;
+  color: rgb(239, 199, 19);
   font-family: Noteworthy;
   font-size: 2rem;
 }
@@ -213,7 +222,7 @@
 .contactForm{
   text-align: center;
   padding: 2rem;
-  background-color: rgba(198, 23, 23, .6);
+  background-color: rgba(207, 79, 79, 0.6);
   margin-left: 4rem;
   margin-right: 4rem;
   border-radius:2rem;
@@ -261,11 +270,22 @@
   display: inline-block;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 1rem;
-  padding: 5px;
+  padding: 2rem;
   margin: 10px;
   border-width: .1em;
   text-align: center;
-  padding: .25rem;
+  background-color:white;
+  border-radius: 2rem;
+}
+
+.cartContainer{
+  background-color: rgba(59, 196, 224, 0.6);
+  text-align: center;
+  padding: 2rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  border-radius: 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6);
 }
 
 .emptyCart{
@@ -284,6 +304,7 @@
 .checkoutEnd{
   text-align: right;
   margin-right: 2rem;
+  color:white;
 }
 
 .accountHead{
@@ -292,4 +313,13 @@
   font-size: 2rem;
   font-weight: bold;
   color: rgb(255, 0, 0);
+}
+
+.accountWrapper{
+  background-color: rgba(255, 0, 251, 0.6);
+  padding: 2rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  border-radius: 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6);
 }

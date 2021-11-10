@@ -1,4 +1,5 @@
 import React from 'react';
+import OrderCard from './OrderCard'
 
 
 export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, currentUser, handleCheckout}) {
@@ -13,6 +14,7 @@ export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, 
     return(
             <div className="checkoutStart">
                 <h1 className="cartHeader">{currentUser.name}'s Cart</h1>
+                <div className="cartContainer">
                 <div className="emptyCart">
                     {cartItems.length === 0 && <div className="emptyCart"> Cart is Empty </div> }
                 </div>
@@ -56,5 +58,5 @@ export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, 
                 </div>
             )}
             </div>
-            
+        </div>
             )}

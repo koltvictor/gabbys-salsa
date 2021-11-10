@@ -1,10 +1,17 @@
 class Api::OrdersController < ApplicationController
 
     def create
-        
-        @order = Order.new(order_params)
-        # @order.user_id = current_user.id
-        render json: @order, status: :created
+        # @order = Order.new(order_params)
+        # @order.user = current_user
+        # render json: @order, status: :created
+        # byebug
+        if params[:order].is_a? Array
+            params[:order].map { |hash| Order.create(order_params(hash)) }
+        else
+            @order = Order.create(order_params)
+        end
+        render json: @order
+        # byebug
     end
 
     def index
@@ -20,6 +27,7 @@ class Api::OrdersController < ApplicationController
 private
 
     def order_params
-        params.permit(:id, :user_id, :date, :name, :price)
+        params.permit(:user_id, :name, :price, :qty)
     end
+
 end

@@ -11,7 +11,7 @@ import Me from './components/Me'
 import Faqs from './components/Faqs'
 import Cart from './components/Cart'
 
-export default function Auth({ currentUser, setCurrentUser }) {
+export default function Auth({ currentUser, setCurrentUser, previousOrders, setOrders }) {
     const [cartItems, setCartItems] = useState([])
     const [order, setOrder] = useState([])
     const history = useHistory();
@@ -45,15 +45,15 @@ export default function Auth({ currentUser, setCurrentUser }) {
         }
       }
 
-      function handleCheckout() {
-        fetch(`/api/cart`, {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(cartItems)})
-            .then(resp => resp.json())
-            .then(() => setOrder()
-            )}
-
+    function handleCheckout() {
+      fetch(`/api/cart.json`, {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify(cartItems)})
+          .then(resp => resp.json())
+          .then(() => setOrder(cartItems)
+)}
+    console.log(cartItems)
     const handleLogout = () => {
         fetch(`/api/logout`, {
           method: 'DELETE',

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :order_items
   # resources :orders
   namespace :api do 
 
@@ -12,6 +13,8 @@ Rails.application.routes.draw do
     post '/cart', to: 'orders#create'
     
     get '/me', to: 'users#show'
+
+    get '/me', to: 'orders#index'
 
     post '/signup', to: 'users#create'
 

@@ -33,7 +33,9 @@ const handleSubmit = (e) => {
 
   return (
     <div className="login">
+
       <Redirect to='/' />
+
       <form onSubmit={handleSubmit}>
         
         <h1 className="loginHeader">Log In</h1>
