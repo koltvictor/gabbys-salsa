@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
   
-  resources :order_items
-  # resources :orders
   namespace :api do 
 
     resources :products, only: [:index, :show]

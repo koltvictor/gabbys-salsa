@@ -1,5 +1,5 @@
 import React from 'react';
-import OrderCard from './OrderCard'
+import ReactDOM from 'react-dom';
 
 
 export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, currentUser, handleCheckout}) {
@@ -9,8 +9,23 @@ export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, 
     const shippingPrice = cartItems < 7 ? 0 : 20;
     const totalPrice = itemsPrice + taxPrice + shippingPrice;
 
-
-
+    const createOrder = (data, actions) =>{
+        return actions.order.create({
+          purchase_units: [
+            {
+              amount: {
+                value: "0.01",
+              },
+            },
+          ],
+        });
+      };
+    
+    const onApprove = (data, actions) => {
+        return actions.order.capture();
+    };
+    const PayPalButton = window.paypal.Buttons.driver("react", { React, ReactDOM });
+    
     return(
             <div className="checkoutStart">
                 <h1 className="cartHeader">{currentUser.name}'s Cart</h1>
@@ -51,9 +66,10 @@ export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, 
                     <hr/> 
                     
                     <div>
-                        <button onClick={handleCheckout}>
-                            Checkout
-                        </button>
+                        <PayPalButton
+                            createOrder={(data, actions) => createOrder(data, actions)}
+                            onApprove={(data, actions) => onApprove(data, actions)}
+                        />
                     </div>       
                 </div>
             )}

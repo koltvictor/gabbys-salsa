@@ -28,6 +28,7 @@ export default function Auth({ currentUser, setCurrentUser, previousOrders, setO
       const itemExist= cartItems.find(x => x.id === product.id)
       if (itemExist) {
           setCartItems(cartItems.map(x=> x.id === product.id ? {...itemExist, qty: itemExist.qty + 1 } : x))
+          console.log(cartItems)
       }
       else {
           setCartItems([...cartItems, {...product, qty:1}])
@@ -45,14 +46,15 @@ export default function Auth({ currentUser, setCurrentUser, previousOrders, setO
         }
       }
 
-    function handleCheckout() {
-      fetch(`/api/cart.json`, {
-          method: 'POST',
-          headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify(cartItems)})
-          .then(resp => resp.json())
-          .then(() => setOrder(cartItems)
-)}
+//     This was to handle check out, but instead of building it all on this site, I implemented PayPal checkout API
+//     function handleCheckout() {
+//       fetch(`/api/cart.json`, {
+//           method: 'POST',
+//           headers: {'Content-Type': 'application/json'},
+//           body: JSON.stringify(cartItems)})
+//           .then(resp => resp.json())
+//           .then(() => setOrder(cartItems)
+// )}
     console.log(cartItems)
     const handleLogout = () => {
         fetch(`/api/logout`, {
@@ -101,7 +103,6 @@ export default function Auth({ currentUser, setCurrentUser, previousOrders, setO
                 handleAddToCart={handleAddToCart} 
                 handleRemoveFromCart={handleRemoveFromCart}
                 currentUser={currentUser}
-                handleCheckout={handleCheckout}
                 />
             </Route>
         </Switch>
