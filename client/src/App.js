@@ -25,7 +25,7 @@ export default function App() {
             setOrders(user.orders)
           })
         } else {
-          setAuthChecked(false)
+          setAuthChecked(true)
         }
       })
   }, [setCurrentUser])
@@ -40,7 +40,7 @@ export default function App() {
             setCurrentUser={setCurrentUser}
             currentUser={currentUser}
             orders={setOrders}
-            // setOrders={setOrders}
+            setOrders={setOrders}
           />
         ) : (
           <UnAuth

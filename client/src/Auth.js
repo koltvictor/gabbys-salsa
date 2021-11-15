@@ -28,7 +28,6 @@ export default function Auth({ currentUser, setCurrentUser, previousOrders, setO
       const itemExist= cartItems.find(x => x.id === product.id)
       if (itemExist) {
           setCartItems(cartItems.map(x=> x.id === product.id ? {...itemExist, qty: itemExist.qty + 1 } : x))
-          console.log(cartItems)
       }
       else {
           setCartItems([...cartItems, {...product, qty:1}])
@@ -55,7 +54,7 @@ export default function Auth({ currentUser, setCurrentUser, previousOrders, setO
 //           .then(resp => resp.json())
 //           .then(() => setOrder(cartItems)
 // )}
-    console.log(cartItems)
+
     const handleLogout = () => {
         fetch(`/api/logout`, {
           method: 'DELETE',
@@ -68,7 +67,7 @@ export default function Auth({ currentUser, setCurrentUser, previousOrders, setO
             }
           })
       };
-    
+    console.log(cartItems)
     return (
     <div>
         <Header currentUser={currentUser} handleLogout={handleLogout} countCartItems = {cartItems.length}/>
@@ -95,7 +94,6 @@ export default function Auth({ currentUser, setCurrentUser, previousOrders, setO
                 <Me 
                 currentUser={currentUser}
                 cartItems={cartItems}
-                order={order}
                 />
             </Route>
             <Route exact path='/cart'>

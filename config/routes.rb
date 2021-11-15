@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     
     get '/me', to: 'users#show'
 
-    get '/me', to: 'orders#index'
+    # get '/me', to: 'orders#index'
 
     post '/signup', to: 'users#create'
 

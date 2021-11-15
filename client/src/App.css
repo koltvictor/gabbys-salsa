@@ -74,6 +74,13 @@
   margin: 8rem;
 }
 
+.inputField{
+  background:transparent;
+  margin-left: 2rem;
+  padding: .3rem;
+  color: white;
+}
+
 .header{
   text-align: center;
   padding: 1rem;
@@ -199,7 +206,27 @@
   font-size: 1.5rem;
   font-weight: bold;
   color: rgb(0, 0, 0);
+  font-family: Noteworthy;
 }
+
+.addToCartButton{
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #5f5757;
+  margin: 0.5rem 0;
+  border-radius: 0.12rem;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 300;
+  transition: all 0.2s;
+  background-color: transparent;
+  cursor: pointer;
+ }
+ 
+ .addToCartButton:hover{
+   color: white;
+   background-color: rgba(185, 46, 46, .6);
+ }
 
 .aboutHead{
   font-family: Noteworthy;
@@ -255,15 +282,27 @@
   color:white;
 }
 
+::-webkit-input{
+  color:white;
+  background-color:transparent;
+}
+
 .contactButton{
-  background-color: #f1fe34;
-  color: rgb(38, 212, 25);
-  border-radius: 5px;
-  padding: 10px;
-  border: none;
-  font-size: 20px;
-  font-weight: bold;
-  font-family: Noteworthy;
+ display: inline-block;
+ padding: 0.35em 1.2em;
+ border: 0.1em solid #FFFFFF;
+ margin: 0.5rem 0;
+ border-radius: 0.12rem;
+ box-sizing: border-box;
+ text-decoration: none;
+ font-weight: 300;
+ transition: all 0.2s;
+ background-color:transparent;
+}
+
+.contactButton:hover{
+  color: 000;
+  background-color: #FFFFFF;
 }
 
 .faqsHead{
@@ -332,6 +371,10 @@
   text-align: right;
   margin-right: 2rem;
   color:white;
+}
+
+.payPalButton{
+  text-align: center;
 }
 
 .accountHead{

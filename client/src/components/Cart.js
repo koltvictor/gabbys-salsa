@@ -5,11 +5,11 @@ import ReactDOM from 'react-dom';
 export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, currentUser, handleCheckout}) {
     
     const itemsPrice = cartItems.reduce((a,c) => a + c.price * c.qty, 0)
-    const taxPrice = itemsPrice * .0825;
+    // const taxPrice = itemsPrice * .0825;
     const shippingPrice = cartItems < 7 ? 0 : 20;
-    const totalPrice = itemsPrice + taxPrice + shippingPrice;
+    const totalPrice = itemsPrice + shippingPrice;
 
-    const createOrder = (data, actions) =>{
+    const createOrder = (data, actions) => {
         return actions.order.create({
           purchase_units: [
             {
@@ -19,8 +19,8 @@ export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, 
             },
           ],
         });
-      };
-    
+    };
+
     const onApprove = (data, actions) => {
         return actions.order.capture();
     };
@@ -65,8 +65,8 @@ export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, 
 
                     <hr/> 
                     
-                    <div>
-                        <PayPalButton
+                    <div className="payPalButton">
+                        <PayPalButton 
                             createOrder={(data, actions) => createOrder(data, actions)}
                             onApprove={(data, actions) => onApprove(data, actions)}
                         />

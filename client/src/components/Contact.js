@@ -10,16 +10,17 @@ export default function Contact() {
                 error => console.log(error.text)
             );
         e.target.reset();
+        alert("Message Sent!");
     }
     return (
         <div>
             <h1 className="contactHead">Contact Form</h1>
             <form className="contactForm" onSubmit={sendEmail}>
                 <input className="contactInput" type="hidden" name="contact_number" /><br/>
-                <input className="contactInput" type="text" name="from_name" placeholder="What's your name?"/><br/>   
-                <input className="contactInput" type="email" name="from_email" placeholder="What's your email address?"/><br/>
-                <input className="contactInput" type="text" name="subject" placeholder="What's the subject of your message?"/><br/><br/>
-                <textarea  className="contactInput" name="html_message"placeholder="Your message goes here:"/><br/><br/><br/><br/><br/><br/>
+                <input className="contactInput" type="text" name="from_name" placeholder="Your name" required/><br/>   
+                <input className="contactInput" type="email" name="from_email" placeholder="Email address" required/><br/>
+                <input className="contactInput" type="text" name="subject" placeholder="Subject" required/><br/><br/>
+                <textarea  className="contactInput" name="html_message"placeholder="Message" required/><br/><br/><br/><br/><br/><br/>
                 <input type="submit" value="Send" className="contactButton"/>
             </form>
         </div>

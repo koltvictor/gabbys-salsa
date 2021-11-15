@@ -42,14 +42,16 @@ export default function SignUp({ setCurrentUser}) {
             <form onSubmit={handleSubmit}>
                     <h1>Sign Up</h1>
                     <p>
-                        <label>
+                    <label className='label'>
                             Name
-                        </label>
-                        <input 
+                    </label>
+                    <input 
                         type="text" 
                         name="name" 
                         value={name} 
-                        onChange={e => setName(e.target.value)} />
+                        onChange={e => setName(e.target.value)}
+                        className="inputField"
+                    />
                     </p>
                     <p>
                     <label className='label'>
@@ -102,8 +104,6 @@ export default function SignUp({ setCurrentUser}) {
                         className="inputField"
                     />
                     </p>
-
-                    <p>{error}</p>
 
                     <p><button type="submit" className="loginButton">Sign Up</button></p>
 

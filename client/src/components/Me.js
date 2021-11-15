@@ -1,18 +1,5 @@
-import OrderCard from './OrderCard';
+export default function Me({ currentUser }) {
 
-export default function Me({ currentUser, order }) {
-    console.log(order)
-
-    const orders = order.map((data) => {
-        console.log(data)
-        return (
-            <OrderCard
-                key={data.id}
-                id={data.id}
-                order={data}
-            />
-        )
-    })
     return (
         <div>
             <div>
