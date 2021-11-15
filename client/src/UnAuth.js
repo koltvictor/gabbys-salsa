@@ -8,13 +8,13 @@ export default function UnAuth({ setCurrentUser }) {
     return (
       <div>
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/login">
             <LogIn setCurrentUser={setCurrentUser} />
           </Route>
           <Route exact path="/signup">
               <SignUp setCurrentUser={setCurrentUser}/>
           </Route>
-          <Redirect to="/" />
+          <Redirect to="/login" />
         </Switch>
       </div>
     )
