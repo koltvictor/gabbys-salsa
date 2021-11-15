@@ -22,8 +22,7 @@ export default function Me({ currentUser, order }) {
                 <h3>Username: {currentUser.username}</h3>
                 <h3>Email on file:  {currentUser.email}</h3><br /><br/>
                 <ul className="orderHistory">
-                    <h3>{currentUser.name}'s Order History</h3>
-                    <li>{orders}</li>
+                    <h3>{currentUser.name}'s Password Reset</h3>
                 </ul>
             </div>
         </div>

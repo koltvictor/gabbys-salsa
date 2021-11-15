@@ -180,16 +180,25 @@
   grid-gap: 1rem;
   padding: 2rem;
   margin: 10px;
+  max-width: 300px;
   border-width: .1em;
   text-align: center;
   border-style: solid;
   border-radius: 1rem;
-  background-color:white;  
+  background-color:white;
+  overflow-wrap: break-word;  
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .6);
 }
 
 .productImg{
-  height: 6rem;
-  width: 6rem;
+  height: 10rem;
+  width: 11rem;
+}
+
+.productName{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
 }
 
 .aboutHead{
@@ -232,11 +241,29 @@
 
 .contactInput{
   height: auto;
+  width: 30rem;
+  padding: 0.5rem;
+  background-color:transparent;
+  border-bottom: 1px solid black;
+  border-top:transparent;
+  border-left:transparent;
+  border-right:transparent;
+  font-family: "Helvetica Neue",Helvetica,Arial;
 }
 
-.contactInputLabel{
-  font-size: 1.5rem;
+::-webkit-input-placeholder{
+  color:white;
+}
+
+.contactButton{
+  background-color: #f1fe34;
+  color: rgb(38, 212, 25);
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  font-size: 20px;
   font-weight: bold;
+  font-family: Noteworthy;
 }
 
 .faqsHead{

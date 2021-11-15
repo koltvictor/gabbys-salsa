@@ -16,15 +16,11 @@ export default function Contact() {
             <h1 className="contactHead">Contact Form</h1>
             <form className="contactForm" onSubmit={sendEmail}>
                 <input className="contactInput" type="hidden" name="contact_number" /><br/>
-                <label className="contactInputLabel">Name</label>
-                <input className="contactInput" type="text" name="from_name"/><br/>   
-                <label className="contactInputLabel">Email</label>
-                <input className="contactInput" type="email" name="from_email"/><br/>
-                <label className="contactInputLabel">Subject</label>
-                <input className="contactInput" type="text" name="subject"/><br/>
-                <label className="contactInputLabel">Message</label>
-                <textarea  className="contactInput" name="html_message"/><br/>
-                <input type="submit" value="Send" />
+                <input className="contactInput" type="text" name="from_name" placeholder="What's your name?"/><br/>   
+                <input className="contactInput" type="email" name="from_email" placeholder="What's your email address?"/><br/>
+                <input className="contactInput" type="text" name="subject" placeholder="What's the subject of your message?"/><br/><br/>
+                <textarea  className="contactInput" name="html_message"placeholder="Your message goes here:"/><br/><br/><br/><br/><br/><br/>
+                <input type="submit" value="Send" className="contactButton"/>
             </form>
         </div>
     )
