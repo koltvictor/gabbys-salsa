@@ -14,7 +14,7 @@ export default function UnAuth({ setCurrentUser }) {
           <Route exact path="/signup">
               <SignUp setCurrentUser={setCurrentUser}/>
           </Route>
-          {/* <Redirect to="/" /> */}
+          <Redirect to="/" />
         </Switch>
       </div>
     )
