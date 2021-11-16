@@ -18,6 +18,8 @@ export default function Auth({ currentUser, setCurrentUser, previousOrders, setO
 
     const [productList, setProductList] = useState([])
 
+    const items = JSON.parse(localStorage.getItem('cartItems'))
+
     useEffect(() => {
         fetch('/api/products')
         .then((r) => r.json())
@@ -34,9 +36,6 @@ export default function Auth({ currentUser, setCurrentUser, previousOrders, setO
       }
       localStorage.setItem('cartItems', JSON.stringify(cartItems))
   }
-  // const myStorage = window.localStorage;
-  const items = JSON.parse(localStorage.getItem('cartItems'))
-  console.log(items)
 
     function handleRemoveFromCart(product){
         const itemExist = cartItems.find(x => x.id === product.id)
@@ -47,6 +46,7 @@ export default function Auth({ currentUser, setCurrentUser, previousOrders, setO
         else {
           setCartItems(cartItems.map(x=> x.id === product.id ? {...itemExist, qty: itemExist.qty - 1 } : x))
         }
+        localStorage.setItem('cartItems', JSON.stringify(cartItems))
       }
 
     const handleLogout = () => {
