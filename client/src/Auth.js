@@ -67,7 +67,7 @@ export default function Auth({ currentUser, setCurrentUser, previousOrders, setO
             }
           })
       };
-    console.log(cartItems)
+    // console.log(cartItems)
     return (
     <div>
         <Header currentUser={currentUser} handleLogout={handleLogout} countCartItems = {cartItems.length}/>
