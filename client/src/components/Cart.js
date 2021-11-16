@@ -9,10 +9,8 @@ export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, 
     const shippingPrice = cartItems < 7 ? 0 : 20;
     const totalPrice = itemsPrice + shippingPrice;
 
-    console.log(items)
-
-    let map = [items].map((item) => {
-        console.log(item)
+    let map = items.map((item) => {
+        (JSON.parse(localStorage.getItem('cartItems')))
     })
 
     const createOrder = (data, actions) => {
@@ -37,9 +35,9 @@ export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, 
                 <h1 className="cartHeader">{currentUser.name}'s Cart</h1>
                 <div className="cartContainer">
                 <div className="emptyCart">
-                    {cartItems.length === 0 && <div className="emptyCart"> Cart is Empty </div> }
+                    {JSON.parse(localStorage.getItem('cartItems')).length === 0 && <div className="emptyCart"> Cart is Empty </div> }
                 </div>
-                {cartItems.map((item) => (
+                {items.map((item) => (
                     <div key={item.id} className="cartItem"> 
                         <img src={item.image} alt={item.name} height="50" width="50"></img>
                         <br/><br/>
@@ -54,7 +52,7 @@ export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, 
                         </div>
                     </div>
                 ))} 
-            {cartItems.length !== 0 && (
+            {JSON.parse(localStorage.getItem('cartItems')).length !== 0 && (
                 <div className="checkoutEnd">
                     <hr />
                     <div>

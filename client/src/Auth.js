@@ -35,7 +35,7 @@ export default function Auth({ currentUser, setCurrentUser, previousOrders, setO
       localStorage.setItem('cartItems', JSON.stringify(cartItems))
   }
   // const myStorage = window.localStorage;
-  const items = localStorage.getItem('cartItems')
+  const items = JSON.parse(localStorage.getItem('cartItems'))
   console.log(items)
 
     function handleRemoveFromCart(product){
@@ -74,7 +74,10 @@ export default function Auth({ currentUser, setCurrentUser, previousOrders, setO
     // console.log(cartItems)
     return (
     <div>
-        <Header currentUser={currentUser} handleLogout={handleLogout} countCartItems = {cartItems.length}/>
+        <Header 
+        currentUser={currentUser} 
+        handleLogout={handleLogout} 
+        countCartItems = {items.length}/>
         <Switch>
             <Route exact path="/">
                 <Home />
