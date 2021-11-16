@@ -25,7 +25,7 @@ const handleSubmit = (e) => {
           })
         } else {
           r.json().then(errors => {
-            alert(errors.full_messages)
+            console.log(errors)
           })
         }
       })
