@@ -32,7 +32,11 @@ export default function Auth({ currentUser, setCurrentUser, previousOrders, setO
       else {
           setCartItems([...cartItems, {...product, qty:1}])
       }
+      localStorage.setItem('cartItems', JSON.stringify(cartItems))
   }
+  // const myStorage = window.localStorage;
+  const items = localStorage.getItem('cartItems')
+  console.log(items)
 
     function handleRemoveFromCart(product){
         const itemExist = cartItems.find(x => x.id === product.id)
@@ -101,6 +105,7 @@ export default function Auth({ currentUser, setCurrentUser, previousOrders, setO
                 handleAddToCart={handleAddToCart} 
                 handleRemoveFromCart={handleRemoveFromCart}
                 currentUser={currentUser}
+                items={items}
                 />
             </Route>
         </Switch>

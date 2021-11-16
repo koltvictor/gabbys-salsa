@@ -2,19 +2,25 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 
-export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, currentUser, handleCheckout}) {
+export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, currentUser, items}) {
     
     const itemsPrice = cartItems.reduce((a,c) => a + c.price * c.qty, 0)
     // const taxPrice = itemsPrice * .0825;
     const shippingPrice = cartItems < 7 ? 0 : 20;
     const totalPrice = itemsPrice + shippingPrice;
 
+    console.log(items)
+
+    let map = [items].map((item) => {
+        console.log(item)
+    })
+
     const createOrder = (data, actions) => {
         return actions.order.create({
           purchase_units: [
             {
               amount: {
-                value: "0.01",
+                value: totalPrice,
               },
             },
           ],
@@ -69,6 +75,7 @@ export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, 
                         <PayPalButton 
                             createOrder={(data, actions) => createOrder(data, actions)}
                             onApprove={(data, actions) => onApprove(data, actions)}
+                            totalPrice={totalPrice}
                         />
                     </div>       
                 </div>
