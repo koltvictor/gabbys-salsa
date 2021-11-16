@@ -19,7 +19,7 @@ export default function Auth({ currentUser, setCurrentUser, previousOrders, setO
     const [productList, setProductList] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:4000/api/products')
+        fetch('/api/products')
         .then((r) => r.json())
         .then((data) => setProductList(data))
     }, [])
