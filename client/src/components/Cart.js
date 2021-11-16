@@ -4,8 +4,10 @@ import ReactDOM from 'react-dom';
 
 export default function Cart({handleAddToCart, handleRemoveFromCart, currentUser, items}) {
     
-    // const itemsPrice = items.reduce((a,c) => a + c.price * c.qty, 0)
-    const [itemsPrice, setItemsPrice] = useState('')
+    const itemsPrice = items.reduce((a,c) => a + c.price * c.qty, 0)
+    // const [itemsPrice, setItemsPrice] = useState('')
+
+
     
     const shippingPrice = items < 7 ? 0 : 20;
     const totalPrice = itemsPrice + shippingPrice;
