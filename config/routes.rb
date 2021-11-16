@@ -6,9 +6,9 @@ Rails.application.routes.draw do
 
     resources :users, only: [:index, :show, :create, :update, :destroy]
 
-    get '/cart', to: 'orders#index'
+    # get '/cart', to: 'orders#index'
     
-    post '/cart', to: 'orders#create'
+    # post '/cart', to: 'orders#create'
     
     get '/me', to: 'users#show'
 
