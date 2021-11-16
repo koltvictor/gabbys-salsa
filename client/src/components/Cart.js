@@ -1,17 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 
 
-export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, currentUser, items}) {
+export default function Cart({handleAddToCart, handleRemoveFromCart, currentUser, items}) {
     
-    const itemsPrice = cartItems.reduce((a,c) => a + c.price * c.qty, 0)
-    // const taxPrice = itemsPrice * .0825;
-    const shippingPrice = cartItems < 7 ? 0 : 20;
+    // const itemsPrice = items.reduce((a,c) => a + c.price * c.qty, 0)
+    const [itemsPrice, setItemsPrice] = useState('')
+    
+    const shippingPrice = items < 7 ? 0 : 20;
     const totalPrice = itemsPrice + shippingPrice;
-
-    let map = items.map((item) => {
-        (JSON.parse(localStorage.getItem('cartItems')))
-    })
+    // const taxPrice = itemsPrice * .0825;
 
     const createOrder = (data, actions) => {
         return actions.order.create({
@@ -52,7 +50,7 @@ export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, 
                         </div>
                     </div>
                 ))} 
-            {JSON.parse(localStorage.getItem('cartItems')).length !== 0 && (
+            {items.length !== 0 && (
                 <div className="checkoutEnd">
                     <hr />
                     <div>

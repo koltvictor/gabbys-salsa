@@ -49,16 +49,6 @@ export default function Auth({ currentUser, setCurrentUser, previousOrders, setO
         }
       }
 
-//     This was to handle check out, but instead of building it all on this site, I implemented PayPal checkout API
-//     function handleCheckout() {
-//       fetch(`/api/cart.json`, {
-//           method: 'POST',
-//           headers: {'Content-Type': 'application/json'},
-//           body: JSON.stringify(cartItems)})
-//           .then(resp => resp.json())
-//           .then(() => setOrder(cartItems)
-// )}
-
     const handleLogout = () => {
         fetch(`/api/logout`, {
           method: 'DELETE',
@@ -68,16 +58,17 @@ export default function Auth({ currentUser, setCurrentUser, previousOrders, setO
             if (res.ok) {
               setCurrentUser(null)
               history.push('/')
+              localStorage.clear()
             }
           })
       };
-    // console.log(cartItems)
+
     return (
     <div>
         <Header 
         currentUser={currentUser} 
         handleLogout={handleLogout} 
-        countCartItems = {items.length}/>
+        />
         <Switch>
             <Route exact path="/">
                 <Home />
