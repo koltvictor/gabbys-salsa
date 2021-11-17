@@ -115,11 +115,9 @@ export default function SignUp({ setCurrentUser}) {
                     <button onClick={togglePassword} className="togglePassword">👁️</button>
                     </p>
                     
-                    <p><button type="submit" className="loginButton">Sign Up</button></p>
+                    <p><Link className="loginSignupButton" to="/api/login">⬅ Login</Link><button type="submit" className="loginButton">Sign Up</button></p>
 
-                    <p>-- or --</p>
-
-                    <p><Link className="loginButton" to="/api/login">Log In</Link></p>
+                    <p></p>
 
                 </form>
             
