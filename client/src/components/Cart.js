@@ -30,7 +30,6 @@ export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, 
     const PayPalButton = window.paypal.Buttons.driver("react", { React, ReactDOM });
 
     console.log(items)
-    console.log(localStorage.setLength=0)
     
     return(
             <div className="checkoutStart">

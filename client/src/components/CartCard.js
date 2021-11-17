@@ -12,7 +12,8 @@ export default function CartCard({cartItems, item, items, handleAddToCart, handl
                         <div>
                             {item.qty} x ${item.price.toFixed(2)}
                         </div> 
-            {/* {item.length !== 0 && (
+        </div>
+            /* {item.length !== 0 && (
                 <div className="checkoutEnd">
                     <hr />
                     <div>
@@ -27,15 +28,6 @@ export default function CartCard({cartItems, item, items, handleAddToCart, handl
                         <div>${totalPrice.toFixed(2)}</div>
                     </div>
 
-                    <hr/> 
-                    
-                    {/* <div className="payPalButton">
-                        <PayPalButton 
-                            createOrder={(data, actions) => createOrder(data, actions)}
-                            onApprove={(data, actions) => onApprove(data, actions)}
-                            totalPrice={totalPrice}
-                        />
-                    </div>        */}
+                    <hr/>
                 </div>
-    )
-}
+            )} */   )   }

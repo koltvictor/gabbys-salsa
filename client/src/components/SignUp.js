@@ -9,6 +9,12 @@ export default function SignUp({ setCurrentUser}) {
     const [passwordConfirmation, setPasswordConfirmation] = useState('');
     const [email, setEmail] = useState('');
     const [error, setError] = useState('');
+    const [passwordShown, setPasswordShown] = useState(false);
+
+    const togglePassword = (e) => {
+      e.preventDefault();
+      setPasswordShown(!passwordShown);
+    }
 
     const history = useHistory();
 
@@ -87,7 +93,7 @@ export default function SignUp({ setCurrentUser}) {
                         Password
                     </label>
                     <input
-                        type="password"
+                        type={passwordShown ? 'text' : 'password'}
                         name=""
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
@@ -100,14 +106,15 @@ export default function SignUp({ setCurrentUser}) {
                         Confirm Password
                     </label>
                     <input
-                        type="password"
+                        type={passwordShown ? 'text' : 'password'}
                         name="password_confirmation"
                         value={passwordConfirmation}
                         onChange={(e) => setPasswordConfirmation(e.target.value)}
                         className="inputField"
                     />
+                    <button onClick={togglePassword} className="togglePassword">👁️</button>
                     </p>
-
+                    
                     <p><button type="submit" className="loginButton">Sign Up</button></p>
 
                     <p>-- or --</p>

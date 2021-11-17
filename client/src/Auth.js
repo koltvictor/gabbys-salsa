@@ -17,6 +17,7 @@ export default function Auth({ currentUser, setCurrentUser }) {
     const [productList, setProductList] = useState([])
     const history = useHistory();
     const items = JSON.parse(localStorage.getItem('cartItems'))
+    localStorage.setItem(!!items, "current_user")
 
     useEffect(() => {
         fetch('/api/products')
