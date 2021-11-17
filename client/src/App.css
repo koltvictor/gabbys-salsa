@@ -336,7 +336,8 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 25%;
+  width: 50%;
+  margin-left: 25rem;
   min-height: 20vh;
   display: fixed;
   flex-direction: column;
