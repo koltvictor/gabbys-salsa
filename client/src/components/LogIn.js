@@ -74,9 +74,8 @@ const handleSubmit = (e) => {
             className="inputField"
             required
           />
-          <div>
-            <button onClick={togglePassword} className="loginButton">Show/Hide Password</button>
-          </div>
+          <button onClick={togglePassword} className="togglePassword">👁️</button>
+          
         </p>
         <button className="loginButton" type="submit">Log In</button>
         <br/><br/>
