@@ -10,10 +10,11 @@ import Contact from './components/Contact'
 import Me from './components/Me'
 import Faqs from './components/Faqs'
 import Cart from './components/Cart'
+import ThankYou from './components/ThankYou'
 
 export default function Auth({ currentUser, setCurrentUser, previousOrders, setOrders }) {
     const [cartItems, setCartItems] = useState([])
-    const [order, setOrder] = useState([])
+    // const [order, setOrder] = useState([])
     const history = useHistory();
 
     const [productList, setProductList] = useState([])
@@ -105,7 +106,9 @@ export default function Auth({ currentUser, setCurrentUser, previousOrders, setO
                 />
             </Route>
             <Route exact path='/thankyou'>
-                <h1>Thank you for your order!</h1>
+                <ThankYou 
+                currentUser={currentUser}
+                />
             </Route>
         </Switch>
     </div>

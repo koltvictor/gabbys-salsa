@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import {useHistory} from 'react-router-dom';
 
@@ -41,7 +41,7 @@ export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, 
                 </div>
                 {items.map((item) => (
                     <div key={item.id} className="cartItem"> 
-                        <img src={item.image} alt={item.name} height="50" width="50"></img>
+                        <img src={item.image} alt={item.name} height="100" width="100"></img>
                         <br/><br/>
                         <div>{item.name}</div>
                         <br/>

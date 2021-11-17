@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
-import ThankYou from './ThankYou';
 
 export default function Me({ currentUser, setCurrentUser }) {
 
@@ -12,7 +11,7 @@ export default function Me({ currentUser, setCurrentUser }) {
     function handleUpdatePassword(e) {
         e.preventDefault();
         
-        fetch('/me', {
+        fetch('/api/me', {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -22,9 +21,9 @@ export default function Me({ currentUser, setCurrentUser }) {
         })
         .then(res => {
             if (res.ok) {
-            res.json().then(user => {
-                setCurrentUser(user)
-                history.push('/')
+            res.json().then(data => {
+                setPassword(data)
+                history.push('/me')
             })
             } else {
             res.json().then(errors => {
@@ -47,7 +46,7 @@ export default function Me({ currentUser, setCurrentUser }) {
                 <p>{currentUser.email}</p><br /><br/>
 
                 <h3>{currentUser.name}'s Password Reset</h3>
-                <p>If you would like to reset your password, please click the button below.</p>
+                <p>If you would like to reset your password, please fill out below.</p>
                 <form onSubmit={handleUpdatePassword}>
                 <p>
                     <label className='label'>

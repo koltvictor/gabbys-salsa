@@ -38,12 +38,23 @@
 }
 
 .loginButton {
+  background-color: transparent;
+  border-style: solid;
+  border-color: white;
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.loginButton:hover {
   background-color: #61dafb;
   color: white;
-  border-radius: 5px;
   padding: 10px;
-  border: none;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
   cursor: pointer;
@@ -53,10 +64,10 @@
 .login{
   text-align: center;
   padding: 1rem;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 1);
   color: hotpink;
   font-family: Noteworthy;
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: bold;
   border-radius:2rem;
   margin: 8rem;
@@ -68,7 +79,7 @@
   background-color: #000;
   color: hotpink;
   font-family: Noteworthy;
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: bold;
   border-radius:2rem;
   margin: 8rem;
@@ -393,4 +404,9 @@
   margin-right: 4rem;
   border-radius: 2rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6);
+}
+
+.thankYou{
+  text-align: center;
+  padding-top: 4rem;
 }

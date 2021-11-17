@@ -1,5 +1,5 @@
 class Api::PasswordsController < ApplicationController
-    before_action :require_user_logged_in!
+    # before_action :require_user_logged_in!
 
     def update
       if current_user 
@@ -13,6 +13,6 @@ class Api::PasswordsController < ApplicationController
     private
 
     def password_params
-      params.require(:user).permit(:password, :password_confirmation)
+      params.permit(:password, :password_confirmation)
     end
 end
