@@ -319,6 +319,18 @@
    background-color: rgba(185, 46, 46, .6);
  }
 
+ .productsImg {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  min-height: 20vh;
+  display: fixed;
+  flex-direction: column;
+  align-items: center;
+ }
+
 .aboutHead{
   font-family: Noteworthy;
   text-align: center;
@@ -492,5 +504,5 @@
 
 .thankYou{
   text-align: center;
-  padding-top: 4rem;
+  padding: 4rem;
 }
