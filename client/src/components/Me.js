@@ -80,7 +80,7 @@ export default function Me({ currentUser, setCurrentUser }) {
                     />
                     <button onClick={togglePassword} className="togglePassword">👁️</button>
                     </p>
-                    <button className="loginButton">Reset Password</button>
+                    <button className="resetPasswordButton">Reset Password</button>
                 </form>
                 
             </div>
