@@ -4,6 +4,12 @@ export default function Me({ currentUser, setCurrentUser }) {
 
     const [password, setPassword] = useState('');
     const [passwordConfirmation, setPasswordConfirmation] = useState('');
+    const [passwordShown, setPasswordShown] = useState(false);
+
+    const togglePassword = (e) => {
+      e.preventDefault();
+      setPasswordShown(!passwordShown);
+    }
 
     function handleUpdatePassword(e) {
         e.preventDefault();
@@ -51,7 +57,7 @@ export default function Me({ currentUser, setCurrentUser }) {
                         Password
                     </label>
                     <input
-                        type="password"
+                        type={passwordShown ? 'text' : 'password'}
                         name=""
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
@@ -65,13 +71,14 @@ export default function Me({ currentUser, setCurrentUser }) {
                         Confirm Password
                     </label>
                     <input
-                        type="password"
+                        type={passwordShown ? 'text' : 'password'}
                         name="password_confirmation"
                         value={passwordConfirmation}
                         onChange={(e) => setPasswordConfirmation(e.target.value)}
                         className="inputField"
                         required
                     />
+                    <button onClick={togglePassword} className="togglePassword">👁️</button>
                     </p>
                     <button className="loginButton">Reset Password</button>
                 </form>
