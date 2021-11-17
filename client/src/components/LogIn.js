@@ -7,6 +7,12 @@ export default function LogIn({ setCurrentUser }) {
   const history = useHistory();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [passwordShown, setPasswordShown] = useState(false);
+
+  const togglePassword = (e) => {
+    e.preventDefault();
+    setPasswordShown(!passwordShown);
+  }
 
 const handleSubmit = (e) => {
     e.preventDefault()
@@ -30,6 +36,8 @@ const handleSubmit = (e) => {
         }
       })
   };
+
+
 
   return (
     <div className="login">
@@ -59,13 +67,16 @@ const handleSubmit = (e) => {
             Password
           </label>
           <input
-            type="password"
+            type={passwordShown ? 'text' : 'password'}
             name=""
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             className="inputField"
             required
           />
+          <div>
+            <button onClick={togglePassword} className="loginButton">Show/Hide Password</button>
+          </div>
         </p>
         <button className="loginButton" type="submit">Log In</button>
         <br/><br/>
@@ -76,7 +87,7 @@ const handleSubmit = (e) => {
         
 
       </form>
-
+      
     </div>
   );
 }

@@ -12,13 +12,10 @@ import Faqs from './components/Faqs'
 import Cart from './components/Cart'
 import ThankYou from './components/ThankYou'
 
-export default function Auth({ currentUser, setCurrentUser, previousOrders, setOrders }) {
+export default function Auth({ currentUser, setCurrentUser }) {
     const [cartItems, setCartItems] = useState([])
-    // const [order, setOrder] = useState([])
-    const history = useHistory();
-
     const [productList, setProductList] = useState([])
-
+    const history = useHistory();
     const items = JSON.parse(localStorage.getItem('cartItems'))
 
     useEffect(() => {

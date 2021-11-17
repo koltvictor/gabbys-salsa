@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {useHistory} from 'react-router-dom';
 
-
 export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, currentUser, items}) {
     
     const itemsPrice = cartItems.reduce((a,c) => a + c.price * c.qty, 0)
@@ -28,16 +27,17 @@ export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, 
         return actions.order.capture().then(history.push('/thankyou'));
     };
 
-
-
     const PayPalButton = window.paypal.Buttons.driver("react", { React, ReactDOM });
+
+    console.log(items)
+    console.log(localStorage.setLength=0)
     
     return(
             <div className="checkoutStart">
                 <h1 className="cartHeader">{currentUser.name}'s Cart</h1>
                 <div className="cartContainer">
                 <div className="emptyCart">
-                    {items.length === 'null' && <div className="emptyCart"> Cart is Empty </div> }
+                    {items.length === 0 && <div className="emptyCart"> Your Cart is Empty </div> }
                 </div>
                 {items.map((item) => (
                     <div key={item.id} className="cartItem"> 

@@ -1,12 +1,9 @@
 import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom'
 
 export default function Me({ currentUser, setCurrentUser }) {
 
     const [password, setPassword] = useState('');
     const [passwordConfirmation, setPasswordConfirmation] = useState('');
-
-    const history = useHistory();
 
     function handleUpdatePassword(e) {
         e.preventDefault();
