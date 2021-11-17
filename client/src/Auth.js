@@ -17,7 +17,6 @@ export default function Auth({ currentUser, setCurrentUser }) {
     const [productList, setProductList] = useState([])
     const history = useHistory();
     const items = JSON.parse(localStorage.getItem('cartItems'))
-    localStorage.setItem(!!items, "current_user")
 
     useEffect(() => {
         fetch('/api/products')
@@ -70,7 +69,9 @@ export default function Auth({ currentUser, setCurrentUser }) {
         />
         <Switch>
             <Route exact path="/">
-                <Home />
+                <Home 
+                currentUser={currentUser}
+                />
             </Route>
             <Route exact path="/products">
                 <ProductList currentUser={currentUser} 
@@ -79,7 +80,9 @@ export default function Auth({ currentUser, setCurrentUser }) {
                 cartItems={cartItems} />
             </Route>
             <Route exact path="/about">
-                <About />
+                <About 
+                currentUser={currentUser}
+                />
             </Route>
             <Route exact path="/contact">
                 <Contact />
