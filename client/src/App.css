@@ -77,8 +77,10 @@
 
 .togglePassword{
   background-color: transparent;
-  border-style: none;
-  /* border-color: white; */
+  /* border-style: none; */
+  margin-left: 1rem;
+  border-color: white;
+  border-radius: 100px;
   /* color: white; */
   /* padding: 10px; */
   /* font-size: 14px; */
