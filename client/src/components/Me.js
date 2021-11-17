@@ -23,7 +23,7 @@ export default function Me({ currentUser, setCurrentUser }) {
             if (res.ok) {
             res.json().then(data => {
                 setPassword(data)
-                history.push('/me')
+                window.location.reload()
             })
             } else {
             res.json().then(errors => {
@@ -31,6 +31,7 @@ export default function Me({ currentUser, setCurrentUser }) {
             })
             }
         })
+        alert('Password updated')
     }
     
 
@@ -58,6 +59,7 @@ export default function Me({ currentUser, setCurrentUser }) {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         className="inputField"
+                        required
                     />
                     </p>
 
@@ -71,9 +73,10 @@ export default function Me({ currentUser, setCurrentUser }) {
                         value={passwordConfirmation}
                         onChange={(e) => setPasswordConfirmation(e.target.value)}
                         className="inputField"
+                        required
                     />
                     </p>
-                    <button className="resetButton">Reset Password</button>
+                    <button className="loginButton">Reset Password</button>
                 </form>
                 
             </div>

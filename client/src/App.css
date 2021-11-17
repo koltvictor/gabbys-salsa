@@ -140,7 +140,7 @@
   padding-bottom: 2rem;
   color: rgb(239, 199, 19);
   font-family: Noteworthy;
-  font-size: 2rem;
+  font-size: 1.25rem;
 }
 
 .homePageText1 {
@@ -148,7 +148,7 @@
   padding: 1rem;
   color: rgb(178, 3, 3);
   font-family: Noteworthy;
-  font-size: 2rem;
+  font-size: 1.25rem;
 }
 
 .homePageText2 {
@@ -156,7 +156,7 @@
   padding: 1rem;
   color: rgb(212, 80, 36);
   font-family: Noteworthy;
-  font-size: 2rem;
+  font-size: 1.25rem;
 }
 
 .homePageText3 {
@@ -164,7 +164,7 @@
   padding: 1rem;
   color: rgb(24, 168, 56);
   font-family: Noteworthy;
-  font-size: 2rem;
+  font-size: 1.25rem;
 }
 
 .welcome{
@@ -256,7 +256,7 @@
   margin-right: 4rem;
   border-radius: 2rem;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.25rem;
+  font-size: 1rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6)
 }
 
