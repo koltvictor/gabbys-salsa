@@ -1,15 +1,17 @@
 class Api::PasswordsController < ApplicationController
     before_action :require_user_logged_in!
-    # def edit; end
+
     def update
-      # update user password
-      if Current.user.update(password_params)
-        redirect_to root_path, notice: 'Password Updated'
+      if current_user 
+        current_user.update(password_params)
+        render json: current_user, status: 200
       else
-        render :edit
+        render json: {error: 'Invalid password'}, status: :unauthorized
       end
     end
+
     private
+
     def password_params
       params.require(:user).permit(:password, :password_confirmation)
     end

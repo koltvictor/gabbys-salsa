@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
+import {useHistory} from 'react-router-dom';
 
 
 export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, currentUser, items}) {
@@ -8,6 +9,8 @@ export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, 
     const shippingPrice = items < 7 ? 0 : 20;
     const totalPrice = itemsPrice + shippingPrice;
     // const taxPrice = itemsPrice * .0825;
+
+    const history = useHistory();
 
     const createOrder = (data, actions) => {
         return actions.order.create({
@@ -22,8 +25,10 @@ export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, 
     };
 
     const onApprove = (data, actions) => {
-        return actions.order.capture();
+        return actions.order.capture().then(history.push('/thankyou'));
     };
+
+
 
     const PayPalButton = window.paypal.Buttons.driver("react", { React, ReactDOM });
     

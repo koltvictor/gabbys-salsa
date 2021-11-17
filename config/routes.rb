@@ -5,12 +5,10 @@ Rails.application.routes.draw do
     get '/products', to: 'products#index'
 
     resources :users, only: [:index, :show, :create, :update, :destroy]
-
-    # get '/cart', to: 'orders#index'
-    
-    # post '/cart', to: 'orders#create'
     
     get '/me', to: 'users#show'
+
+    patch '/me', to: 'passwords#update'
 
     # get '/me', to: 'orders#index'
 
@@ -27,7 +25,7 @@ Rails.application.routes.draw do
   # post 'sign_in', to: 'sessions#create', as: 'log_in'
   # delete 'logout', to: 'sessions#destroy'
   # get 'password', to: 'passwords#edit', as: 'edit_password'
-  # patch 'password', to: 'passwords#update'
+  
   # get 'password/reset', to: 'password_resets#new'
   # post 'password/reset', to: 'password_resets#create'
   # get 'password/reset/edit', to: 'password_resets#edit'

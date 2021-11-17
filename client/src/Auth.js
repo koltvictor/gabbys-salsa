@@ -91,6 +91,7 @@ export default function Auth({ currentUser, setCurrentUser, previousOrders, setO
             <Route exact path='/me'>
                 <Me 
                 currentUser={currentUser}
+                setCurrentUser={setCurrentUser}
                 cartItems={cartItems}
                 />
             </Route>
@@ -102,6 +103,9 @@ export default function Auth({ currentUser, setCurrentUser, previousOrders, setO
                 currentUser={currentUser}
                 items={items}
                 />
+            </Route>
+            <Route exact path='/thankyou'>
+                <h1>Thank you for your order!</h1>
             </Route>
         </Switch>
     </div>
