@@ -13,7 +13,7 @@ export default function Contact() {
         alert("Message Sent!");
     }
     return (
-        <div>
+        <div className="contactBack">
             <h1 className="contactHead">Contact Form</h1>
             <form className="contactForm" onSubmit={sendEmail}>
                 <input className="contactInput" type="hidden" name="contact_number" /><br/>
@@ -23,6 +23,7 @@ export default function Contact() {
                 <textarea  className="contactInput" name="html_message"placeholder="Message" required/><br/><br/><br/><br/><br/><br/>
                 <input type="submit" value="Send" className="contactButton"/>
             </form>
+            {/* <img src="https://knowyourbenefits.dfa.ms.gov/media/3540/contact-us.jpg" alt="contact" className="contactImg"/> */}
         </div>
     )
 }

@@ -12,5 +12,6 @@ export default function About ({currentUser}) {
 <br/><br/>
     Italian Rose was founded in 1979, and for over 30 years we have built our business based on one simple concept… we can deliver a superior flavor experience that customers will remember!
             </p>
+            <img src="http://s3.wp.wsu.edu/uploads/sites/2055/2017/07/iStock-477239111-1024x683.jpg" alt="salsa" className="aboutImg"/>
         </div>)
 }

@@ -1,6 +1,6 @@
 export default function Faqs() {
     return (
-        <div>
+        <div className="faqsBack">
             <div>
                 <h1 className="faqsHead">Frequently Asked Questions</h1>
                 <br/>
