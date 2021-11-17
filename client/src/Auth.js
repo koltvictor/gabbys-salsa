@@ -95,7 +95,8 @@ export default function Auth({ currentUser, setCurrentUser, previousOrders, setO
                 />
             </Route>
             <Route exact path='/cart'>
-                <Cart cartItems={cartItems} 
+                <Cart 
+                cartItems={cartItems} 
                 handleAddToCart={handleAddToCart} 
                 handleRemoveFromCart={handleRemoveFromCart}
                 currentUser={currentUser}

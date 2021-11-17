@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 
 export default function SignUp({ setCurrentUser}) {
 
@@ -9,6 +9,8 @@ export default function SignUp({ setCurrentUser}) {
     const [passwordConfirmation, setPasswordConfirmation] = useState('');
     const [email, setEmail] = useState('');
     const [error, setError] = useState('');
+
+    const history = useHistory();
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -28,6 +30,7 @@ export default function SignUp({ setCurrentUser}) {
             if (res.ok) {
             res.json().then(user => {
                 setCurrentUser(user)
+                history.push('/')
             })
             } else {
             res.json().then(errors => {

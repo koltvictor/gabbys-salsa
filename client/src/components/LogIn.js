@@ -50,6 +50,7 @@ const handleSubmit = (e) => {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             className="inputField"
+            required
           />
         </p>
 
@@ -63,6 +64,7 @@ const handleSubmit = (e) => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             className="inputField"
+            required
           />
         </p>
         <button className="loginButton" type="submit">Log In</button>

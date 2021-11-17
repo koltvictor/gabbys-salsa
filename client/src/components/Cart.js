@@ -2,13 +2,9 @@ import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 
 
-export default function Cart({handleAddToCart, handleRemoveFromCart, currentUser, items}) {
+export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, currentUser, items}) {
     
-    const itemsPrice = items.reduce((a,c) => a + c.price * c.qty, 0)
-    // const [itemsPrice, setItemsPrice] = useState('')
-
-
-    
+    const itemsPrice = cartItems.reduce((a,c) => a + c.price * c.qty, 0)
     const shippingPrice = items < 7 ? 0 : 20;
     const totalPrice = itemsPrice + shippingPrice;
     // const taxPrice = itemsPrice * .0825;
@@ -28,6 +24,7 @@ export default function Cart({handleAddToCart, handleRemoveFromCart, currentUser
     const onApprove = (data, actions) => {
         return actions.order.capture();
     };
+
     const PayPalButton = window.paypal.Buttons.driver("react", { React, ReactDOM });
     
     return(
@@ -35,7 +32,7 @@ export default function Cart({handleAddToCart, handleRemoveFromCart, currentUser
                 <h1 className="cartHeader">{currentUser.name}'s Cart</h1>
                 <div className="cartContainer">
                 <div className="emptyCart">
-                    {JSON.parse(localStorage.getItem('cartItems')).length === 0 && <div className="emptyCart"> Cart is Empty </div> }
+                    {items.length === 'null' && <div className="emptyCart"> Cart is Empty </div> }
                 </div>
                 {items.map((item) => (
                     <div key={item.id} className="cartItem"> 
