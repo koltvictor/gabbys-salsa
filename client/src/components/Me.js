@@ -39,7 +39,7 @@ export default function Me({ currentUser, setCurrentUser }) {
     
 
     return (
-        <div>
+        <div className="accountBack">
             <div>
                 <h1 className="accountHead">{currentUser.name}'s Account Info</h1>
             </div>

@@ -128,17 +128,26 @@
   font-size: 1rem;
 }
 
+.fullHeader{
+  position: fixed;
+  width: 100%;
+}
+
 .header{
   text-align: center;
+  /* position: fixed; */
+  width: 100%;
   padding: 1rem;
   background-color: #000;
   color: hotpink;
+  text-shadow: 2px 2px #000;
   font-family: Noteworthy;
   font-size: 3rem;
   font-weight: bold;
 }
 
 .navigation {
+  /* position: relative; */
   display: flex;
   justify-content: space-around;
   background-color: #000000;
@@ -174,7 +183,12 @@
   align-items: center;
 }
 
+.homeWrapper{
+  padding-top: 20vh;
+}
+
 .homePageTextWrapper {
+  /* padding-top: 20vh; */
   background-color: rgba(0, 0, 0, .9);
   border-radius: 4rem;
   margin-left: 4rem;
@@ -222,7 +236,12 @@
   padding-bottom: 1rem;
 }
 
+.productWrapper{
+  padding-top: 20vh;
+}
+
 .productHeader{
+  padding-top: 100px;
   text-align: center;
   padding: 1rem;
   color: indigo;
@@ -233,12 +252,15 @@
 }
 
 .productList{
+  padding-top:200px;
   background-color: rgba(255, 255, 255, 0.6);
   text-align: center;
   padding: 2rem;
   margin-left: 4rem;
   margin-right: 4rem;
   border-radius: 2rem;
+  /* position: relative; */
+
 }
 
 .productCard{
@@ -289,7 +311,7 @@
  }
 
  .productsImg {
-  background-attachment: fixed;
+  /* background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -297,8 +319,14 @@
   min-height: 20vh;
   display: fixed;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
+  position: absolute;
+  bottom: 0;
  }
+
+.about{
+  padding-top: 20vh;
+}
 
  .aboutImg{
   background-attachment: fixed;
@@ -335,12 +363,16 @@
   background-color: rgba(23, 152, 23, .6);
   padding: 2rem;
   color: white;
-  margin-left: 4rem;
-  margin-right: 4rem;
-  border-radius: 2rem;
+  margin-left: 12rem;
+  margin-right: 12rem;
+  /* border-radius: 2rem; */
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6)
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6);
+}
+
+.contactBack{
+  padding-top: 20vh;
 }
 
 .contactHead{
@@ -357,7 +389,7 @@
   background-color: rgba(0, 34, 255, 0.6);
   margin-left: 12rem;
   margin-right: 12rem;
-  border-radius:2rem;
+  /* border-radius:2rem; */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6);
   color:white;
 }
@@ -401,6 +433,10 @@
   background-color: #FFFFFF;
 }
 
+.faqsBack{
+  padding-top: 20vh;
+}
+
 .faqsHead{
   font-family: Noteworthy;
   text-align: center;
@@ -414,15 +450,16 @@
   background-color: rgba(255, 0, 0, .9);
   padding: 2rem;
   color: white;
-  margin-left: 4rem;
-  margin-right: 4rem;
-  border-radius: 2rem;
+  margin-left: 12rem;
+  margin-right: 12rem;
+  /* border-radius: 2rem; */
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6)
 }
 
 .cartHeader{
+  /* padding-top: 5rem; */
   font-family: Noteworthy;
   text-align: center;
   font-size: 2rem;
@@ -445,10 +482,10 @@
 .cartContainer{
   background-color: rgba(59, 196, 224, 0.6);
   text-align: center;
-  padding: 2rem;
-  margin-left: 4rem;
-  margin-right: 4rem;
-  border-radius: 2rem;
+  /* padding: 2rem; */
+  margin-left: 12rem;
+  margin-right: 12rem;
+  /* border-radius: 2rem; */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6);
 }
 
@@ -462,7 +499,7 @@
 .checkoutStart{
   text-align: left;
   margin-left: 2rem;
-  padding-top: 1rem;
+  padding-top: 20vh;
 }
 
 .checkoutEnd{
@@ -475,7 +512,12 @@
   text-align: center;
 }
 
+.accountBack{
+  padding-top: 20vh;
+}
+
 .accountHead{
+  /* padding-top: 5rem; */
   font-family: Noteworthy;
   text-align: center;
   font-size: 2rem;
@@ -487,9 +529,9 @@
 .accountWrapper{
   background-color: violet;
   padding: 2rem;
-  margin-left: 4rem;
-  margin-right: 4rem;
-  border-radius: 2rem;
+  margin-left: 12rem;
+  margin-right: 12rem;
+  /* border-radius: 2rem; */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6);
 }
 

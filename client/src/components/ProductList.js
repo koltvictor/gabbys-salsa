@@ -14,7 +14,7 @@ export default function ProductList ({productList, handleAddToCart}) {
         )})
 
     return (
-        <div>
+        <div className="productWrapper">
             <div className="productHeader">Salsas available for purchase </div>
             <div className="productList">
                 {product}

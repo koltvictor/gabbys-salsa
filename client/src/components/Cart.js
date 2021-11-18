@@ -23,10 +23,7 @@ export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, 
         });
     };
 
-    function handleLocalStorage() {
-        localStorage.clear()
-        console.log(localStorage)
-    }
+
 
     const onApprove = (data, actions) => {
         return actions.order.capture().then(history.push('/thankyou'));
@@ -80,7 +77,6 @@ export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, 
                             createOrder={(data, actions) => createOrder(data, actions)}
                             onApprove={(data, actions) => onApprove(data, actions)}
                             totalPrice={totalPrice}
-                            onClick={handleLocalStorage}
                         />
                     </div>       
                 </div>
