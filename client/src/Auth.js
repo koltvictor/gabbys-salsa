@@ -33,6 +33,7 @@ export default function Auth({ currentUser, setCurrentUser }) {
           setCartItems([...cartItems, {...product, qty:1}])
       }
       localStorage.setItem('cartItems', JSON.stringify(cartItems))
+      console.log(localStorage)
   }
 
     function handleRemoveFromCart(product){

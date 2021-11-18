@@ -2,8 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {useHistory} from 'react-router-dom';
 
-export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, currentUser, items}) {
+export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, currentUser, items, 
+    // count, setCount
+}) {
     
+    // console.log(count)
+
+
+
     const itemsPrice = items.reduce((a,c) => a + c.price * c.qty, 0)
     const shippingPrice = items < 7 ? 0 : 20;
     const totalPrice = itemsPrice + shippingPrice;
