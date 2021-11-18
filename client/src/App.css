@@ -613,6 +613,7 @@
 .thankYou{
   text-align: center;
   padding: 4rem;
+  padding-top: 20vh;
 }
 
 .thankYouButton{

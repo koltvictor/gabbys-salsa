@@ -1,0 +1,143 @@
+Date : 2021-11-18 15:57:41
+Directory : /Users/kolt/Development/Capstone/gabbys-salsa
+Total : 84 files,  41122 codes, 445 comments, 446 blanks, all 42013 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| JSON       |          7 |     39,375 |          0 |          6 |     39,381 |
+| JavaScript |         25 |        739 |         32 |        106 |        877 |
+| CSS        |          3 |        568 |          9 |         80 |        657 |
+| Ruby       |         36 |        297 |        250 |        174 |        721 |
+| Markdown   |          2 |         51 |          0 |         45 |         96 |
+| YAML       |          4 |         31 |        115 |         21 |        167 |
+| HTML       |          2 |         29 |         23 |          1 |         53 |
+| Gemfile    |          1 |         17 |         16 |         10 |         43 |
+| erb        |          2 |         13 |          0 |          3 |         16 |
+| XML        |          2 |          2 |          0 |          0 |          2 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                 | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                    |         84 |     41,122 |        445 |        446 |     42,013 |
+| app                                                                                                  |         17 |        130 |          8 |         38 |        176 |
+| app/channels                                                                                         |          2 |          8 |          0 |          2 |         10 |
+| app/channels/application_cable                                                                       |          2 |          8 |          0 |          2 |         10 |
+| app/controllers                                                                                      |          6 |         85 |          3 |         24 |        112 |
+| app/controllers/api                                                                                  |          4 |         64 |          1 |         17 |         82 |
+| app/jobs                                                                                             |          1 |          2 |          4 |          2 |          8 |
+| app/mailers                                                                                          |          1 |          4 |          0 |          1 |          5 |
+| app/models                                                                                           |          3 |         11 |          1 |          4 |         16 |
+| app/serializers                                                                                      |          2 |          7 |          0 |          2 |          9 |
+| app/views                                                                                            |          2 |         13 |          0 |          3 |         16 |
+| app/views/layouts                                                                                    |          2 |         13 |          0 |          3 |         16 |
+| client                                                                                               |         29 |     39,602 |         58 |        223 |     39,883 |
+| client/public                                                                                        |          2 |         53 |         23 |          2 |         78 |
+| client/src                                                                                           |         24 |      1,303 |         35 |        186 |      1,524 |
+| client/src/components                                                                                |         14 |        530 |         18 |         77 |        625 |
+| config                                                                                               |         20 |        159 |        337 |        144 |        640 |
+| config/environments                                                                                  |          3 |         67 |        111 |         64 |        242 |
+| config/initializers                                                                                  |          7 |          7 |         51 |         23 |         81 |
+| config/locales                                                                                       |          1 |          2 |         30 |          2 |         34 |
+| db                                                                                                   |          4 |         49 |         19 |         13 |         81 |
+| db/migrate                                                                                           |          2 |         23 |          0 |          4 |         27 |
+| public                                                                                               |          9 |         55 |          6 |          1 |         62 |
+| public/static                                                                                        |          6 |          6 |          6 |          0 |         12 |
+| public/static/css                                                                                    |          1 |          1 |          1 |          0 |          2 |
+| public/static/js                                                                                     |          4 |          4 |          5 |          0 |          9 |
+| public/static/media                                                                                  |          1 |          1 |          0 |          0 |          1 |
++------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                             | language   | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| /Users/kolt/Development/Capstone/gabbys-salsa/Gemfile                                                | Gemfile    |         17 |         16 |         10 |         43 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/README.md                                              | Markdown   |         13 |          0 |         12 |         25 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/app/channels/application_cable/channel.rb              | Ruby       |          4 |          0 |          1 |          5 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/app/channels/application_cable/connection.rb           | Ruby       |          4 |          0 |          1 |          5 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/app/controllers/api/passwords_controller.rb            | Ruby       |         14 |          1 |          3 |         18 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/app/controllers/api/products_controller.rb             | Ruby       |          9 |          0 |          3 |         12 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/app/controllers/api/session_controller.rb              | Ruby       |         18 |          0 |          4 |         22 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/app/controllers/api/users_controller.rb                | Ruby       |         23 |          0 |          7 |         30 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/app/controllers/application_controller.rb              | Ruby       |         16 |          0 |          6 |         22 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/app/controllers/fallback_controller.rb                 | Ruby       |          5 |          2 |          1 |          8 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/app/jobs/application_job.rb                            | Ruby       |          2 |          4 |          2 |          8 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/app/mailers/application_mailer.rb                      | Ruby       |          4 |          0 |          1 |          5 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/app/models/application_record.rb                       | Ruby       |          3 |          0 |          1 |          4 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/app/models/product.rb                                  | Ruby       |          3 |          0 |          1 |          4 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/app/models/user.rb                                     | Ruby       |          5 |          1 |          2 |          8 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/app/serializers/product_serializer.rb                  | Ruby       |          4 |          0 |          1 |          5 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/app/serializers/user_serializer.rb                     | Ruby       |          3 |          0 |          1 |          4 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/app/views/layouts/mailer.html.erb                      | erb        |         12 |          0 |          2 |         14 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/app/views/layouts/mailer.text.erb                      | erb        |          1 |          0 |          1 |          2 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/client/README.md                                       | Markdown   |         38 |          0 |         33 |         71 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/client/package-lock.json                               | JSON       |     38,168 |          0 |          1 |     38,169 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/client/package.json                                    | JSON       |         40 |          0 |          1 |         41 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/client/public/index.html                               | HTML       |         28 |         23 |          1 |         52 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/client/public/manifest.json                            | JSON       |         25 |          0 |          1 |         26 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/client/src/App.css                                     | CSS        |        555 |          8 |         78 |        641 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/client/src/App.js                                      | JavaScript |         40 |          2 |          7 |         49 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/client/src/App.test.js                                 | JavaScript |          7 |          0 |          2 |          9 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/client/src/Auth.js                                     | JavaScript |        111 |          0 |         10 |        121 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/client/src/UnAuth.js                                   | JavaScript |         19 |          0 |          2 |         21 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/client/src/components/About.js                         | JavaScript |         17 |          0 |          0 |         17 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/client/src/components/Cart.js                          | JavaScript |         79 |          1 |         15 |         95 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/client/src/components/CartCard.js                      | JavaScript |         16 |         17 |          0 |         33 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/client/src/components/Contact.js                       | JavaScript |         29 |          0 |          1 |         30 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/client/src/components/Faqs.js                          | JavaScript |         24 |          0 |          1 |         25 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/client/src/components/Header.js                        | JavaScript |         23 |          0 |          4 |         27 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/client/src/components/Home.js                          | JavaScript |          9 |          0 |          2 |         11 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/client/src/components/LogIn.js                         | JavaScript |         76 |          0 |         16 |         92 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/client/src/components/Me.js                            | JavaScript |         80 |          0 |          9 |         89 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/client/src/components/OrderCard.js                     | JavaScript |         11 |          0 |          3 |         14 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/client/src/components/ProductCard.js                   | JavaScript |         12 |          0 |          3 |         15 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/client/src/components/ProductList.js                   | JavaScript |         20 |          0 |          5 |         25 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/client/src/components/SignUp.js                        | JavaScript |        113 |          0 |         13 |        126 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/client/src/components/ThankYou.js                      | JavaScript |         21 |          0 |          5 |         26 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/client/src/index.css                                   | CSS        |         12 |          0 |          2 |         14 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/client/src/index.js                                    | JavaScript |         15 |          3 |          5 |         23 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/client/src/logo.svg                                    | XML        |          1 |          0 |          0 |          1 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/client/src/reportWebVitals.js                          | JavaScript |         12 |          0 |          2 |         14 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/client/src/setupTests.js                               | JavaScript |          1 |          4 |          1 |          6 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/config.ru                                              | Ruby       |          3 |          1 |          3 |          7 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/config/application.rb                                  | Ruby       |         23 |         18 |         10 |         51 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/config/boot.rb                                         | Ruby       |          3 |          0 |          2 |          5 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/config/cable.yml                                       | YAML       |          8 |          0 |          3 |         11 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/config/database.yml                                    | YAML       |         15 |         62 |         10 |         87 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/config/environment.rb                                  | Ruby       |          2 |          2 |          2 |          6 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/config/environments/development.rb                     | Ruby       |         24 |         23 |         20 |         67 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/config/environments/production.rb                      | Ruby       |         22 |         65 |         27 |        114 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/config/environments/test.rb                            | Ruby       |         21 |         23 |         17 |         61 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/config/initializers/application_controller_renderer.rb | Ruby       |          0 |          7 |          2 |          9 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/config/initializers/backtrace_silencers.rb             | Ruby       |          1 |          5 |          3 |          9 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/config/initializers/cors.rb                            | Ruby       |          0 |         12 |          7 |         19 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/config/initializers/filter_parameter_logging.rb        | Ruby       |          3 |          2 |          2 |          7 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/config/initializers/inflections.rb                     | Ruby       |          0 |         14 |          3 |         17 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/config/initializers/mime_types.rb                      | Ruby       |          0 |          3 |          2 |          5 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/config/initializers/wrap_parameters.rb                 | Ruby       |          3 |          8 |          4 |         15 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/config/locales/en.yml                                  | YAML       |          2 |         30 |          2 |         34 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/config/puma.rb                                         | Ruby       |          8 |         28 |          8 |         44 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/config/routes.rb                                       | Ruby       |         12 |         12 |         13 |         37 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/config/spring.rb                                       | Ruby       |          6 |          0 |          1 |          7 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/config/storage.yml                                     | YAML       |          6 |         23 |          6 |         35 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/db/migrate/20211102210618_create_users.rb              | Ruby       |         11 |          0 |          2 |         13 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/db/migrate/20211102210707_create_products.rb           | Ruby       |         12 |          0 |          2 |         14 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/db/schema.rb                                           | Ruby       |         22 |         12 |          6 |         40 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/db/seeds.rb                                            | Ruby       |          4 |          7 |          3 |         14 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/package-lock.json                                      | JSON       |      1,073 |          0 |          1 |      1,074 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/package.json                                           | JSON       |         21 |          0 |          1 |         22 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/public/asset-manifest.json                             | JSON       |         23 |          0 |          0 |         23 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/public/index.html                                      | HTML       |          1 |          0 |          0 |          1 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/public/manifest.json                                   | JSON       |         25 |          0 |          1 |         26 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/public/static/css/main.a617e044.chunk.css              | CSS        |          1 |          1 |          0 |          2 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/public/static/js/2.1e7d00c8.chunk.js                   | JavaScript |          1 |          2 |          0 |          3 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/public/static/js/3.172c47e3.chunk.js                   | JavaScript |          1 |          1 |          0 |          2 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/public/static/js/main.c779a3a6.chunk.js                | JavaScript |          1 |          1 |          0 |          2 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/public/static/js/runtime-main.6a5a3d62.js              | JavaScript |          1 |          1 |          0 |          2 |
+| /Users/kolt/Development/Capstone/gabbys-salsa/public/static/media/logo.6ce24c58.svg                  | XML        |          1 |          0 |          0 |          1 |
+| Total                                                                                                |            |     41,122 |        445 |        446 |     42,013 |
++------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
