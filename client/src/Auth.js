@@ -66,6 +66,7 @@ export default function Auth({ currentUser, setCurrentUser }) {
     <div>
       
         <Header 
+        items={items}
         currentUser={currentUser} 
         handleLogout={handleLogout} 
         />

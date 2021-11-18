@@ -59,7 +59,7 @@ export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, 
                         </div>
                     </div>
                 ))} 
-            {items.length !== 0 && (
+            {items !== 0 && (
                 <div className="checkoutEnd">
                     <hr />
                     <div>
