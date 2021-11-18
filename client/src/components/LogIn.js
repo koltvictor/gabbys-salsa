@@ -49,6 +49,7 @@ const handleSubmit = (e) => {
         <h1 className="loginHeader">Log In</h1>
         <div className="loginForm">
         <p>
+          <div className="loginUser">
           <label className="label">
             Username
           </label>
@@ -60,6 +61,7 @@ const handleSubmit = (e) => {
             className="inputField"
             required
           />
+          </div>
         </p>
 
         <p>

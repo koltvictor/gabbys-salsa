@@ -109,6 +109,10 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6);
 }
 
+.loginUser{
+  margin-left: -3rem;
+}
+
 .signup{
   text-align: center;
   padding: 1rem;
