@@ -63,6 +63,7 @@ export default function Auth({ currentUser, setCurrentUser }) {
 
     return (
     <div>
+      
         <Header 
         currentUser={currentUser} 
         handleLogout={handleLogout} 
@@ -112,6 +113,7 @@ export default function Auth({ currentUser, setCurrentUser }) {
                 />
             </Route>
         </Switch>
+        
     </div>
   );
 }

@@ -86,44 +86,14 @@
   margin-top: 20px;
 }
 
-.resetPasswordButton {
-  background-color: transparent;
-  border-style: solid;
-  border-color: white;
-  color: white;
-  padding: 10px;
-  font-size: 18px;
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-  cursor: pointer;
-  margin-top: 20px;
-  margin-left: 22rem;
-}
-
-.resetPasswordButton:hover {
-  background-color: #61dafb;
-  color: white;
-  padding: 10px;
-  font-size: 18px;
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-  cursor: pointer;
-  margin-top: 20px;
-}
-
 .togglePassword{
   background-color: transparent;
-  /* border-style: none; */
   margin-left: 1rem;
   border-color: white;
   border-radius: 100px;
-  /* color: white; */
-  /* padding: 10px; */
-  /* font-size: 14px; */
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
   cursor: pointer;
-  /* margin-top: 20px; */
 }
 
 .login{
@@ -269,7 +239,6 @@
   margin-left: 4rem;
   margin-right: 4rem;
   border-radius: 2rem;
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6) */
 }
 
 .productCard{
@@ -524,7 +493,46 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6);
 }
 
+.resetPasswordButton {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #000000;
+  margin: 0.5rem 0;
+  border-radius: 0.12rem;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 300;
+  transition: all 0.2s;
+  background-color:transparent;
+  margin-left: 20rem;
+}
+
+.resetPasswordButton:hover {
+  background-color: transparent;
+  color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6);
+}
+
 .thankYou{
   text-align: center;
   padding: 4rem;
+}
+
+.thankYouButton{
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #000000;
+  margin: 0.5rem 0;
+  border-radius: 0.12rem;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 300;
+  transition: all 0.2s;
+  background-color:transparent;
+}
+
+.thankYouButton:hover{
+  background-color: #1cbcb7;
+  color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6);
 }
