@@ -104,8 +104,9 @@
   font-family: Noteworthy;
   font-size: 1rem;
   font-weight: bold;
-  border-radius:2rem;
+  /* border-radius:2rem; */
   margin: 8rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6);
 }
 
 .signup{
@@ -116,8 +117,9 @@
   font-family: Noteworthy;
   font-size: 1rem;
   font-weight: bold;
-  border-radius:2rem;
+  /* border-radius:2rem; */
   margin: 8rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6);
 }
 
 .inputField{
@@ -190,9 +192,9 @@
 .homePageTextWrapper {
   /* padding-top: 20vh; */
   background-color: rgba(0, 0, 0, .9);
-  border-radius: 4rem;
-  margin-left: 4rem;
-  margin-right: 4rem;
+  /* border-radius: 4rem; */
+  margin-left: 12rem;
+  margin-right: 12rem;
   box-shadow: 0 4px 8px 0 black;
 }
 
@@ -306,20 +308,17 @@
  }
  
  .addToCartButton:hover{
-   color: white;
-   background-color: rgba(185, 46, 46, .6);
+   color: black;
+   background-color: transparent;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6);
+ }
+
+ .addToCartButton:active{
+   box-shadow: 0 0 0 0 rgba(0, 0, 0, .6);
+   transform: translateY(3px);
  }
 
  .productsImg {
-  /* background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 100%;
-  min-height: 20vh;
-  display: fixed;
-  flex-direction: column;
-  align-items: center; */
   position: absolute;
   bottom: 0;
  }
@@ -430,7 +429,13 @@
 
 .contactButton:hover{
   color: 000;
-  background-color: #FFFFFF;
+  background-color: transparent;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6);
+}
+
+.contactButton:active{
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, .6);
+  transform: translateY(3px);
 }
 
 .faqsBack{
@@ -452,14 +457,12 @@
   color: white;
   margin-left: 12rem;
   margin-right: 12rem;
-  /* border-radius: 2rem; */
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6)
 }
 
 .cartHeader{
-  /* padding-top: 5rem; */
   font-family: Noteworthy;
   text-align: center;
   font-size: 2rem;
@@ -467,13 +470,13 @@
   text-shadow: 2px 2px black;
   color: rgb(59, 196, 224);
 }
+
 .cartItem{
   display: inline-block;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 1rem;
   padding: 2rem;
   margin: 10px;
-  border-width: .1em;
   text-align: center;
   background-color:white;
   border-radius: 2rem;
@@ -482,12 +485,60 @@
 .cartContainer{
   background-color: rgba(59, 196, 224, 0.6);
   text-align: center;
-  /* padding: 2rem; */
   margin-left: 12rem;
   margin-right: 12rem;
-  /* border-radius: 2rem; */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6);
 }
+
+.addButton{
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #FFFFFF;
+  margin: 0.5rem 0;
+  /* border-radius: 0.12rem; */
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 300;
+  transition: all 0.2s;
+  background-color:transparent;
+ }
+ 
+ .addButton:hover{
+   color: 000;
+   background-color: transparent;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6);
+ }
+ 
+ .addButton:active{
+   box-shadow: 0 0 0 0 rgba(0, 0, 0, .6);
+   transform: translateY(3px);
+ }
+
+ .removeButton{
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #FFFFFF;
+  margin: 0.5rem 0;
+  /* border-radius: 0.12rem; */
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 300;
+  transition: all 0.2s;
+  background-color:transparent;
+ }
+ 
+ .removeButton:hover{
+   color: 000;
+   background-color: transparent;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6);
+ }
+ 
+ .removeButton:active{
+   box-shadow: 0 0 0 0 rgba(0, 0, 0, .6);
+   transform: translateY(3px);
+ }
 
 .emptyCart{
   text-align: center;
@@ -510,6 +561,8 @@
 
 .payPalButton{
   text-align: center;
+  margin-right: 20rem;
+  margin-left: 20rem;
 }
 
 .accountBack{
@@ -517,7 +570,6 @@
 }
 
 .accountHead{
-  /* padding-top: 5rem; */
   font-family: Noteworthy;
   text-align: center;
   font-size: 2rem;
@@ -531,7 +583,6 @@
   padding: 2rem;
   margin-left: 12rem;
   margin-right: 12rem;
-  /* border-radius: 2rem; */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6);
 }
 
@@ -550,13 +601,17 @@
   font-weight: 300;
   transition: all 0.2s;
   background-color:transparent;
-  /* margin-left: 20rem; */
 }
 
 .resetPasswordButton:hover {
   background-color: transparent;
   color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6);
+}
+
+.resetPasswordButton:active{
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, .6);
+  transform: translateY(3px);
 }
 
 .thankYou{
@@ -581,4 +636,9 @@
   background-color: #1cbcb7;
   color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6);
+}
+
+.thankYouButton:active{
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, .6);
+  transform: translateY(3px);
 }

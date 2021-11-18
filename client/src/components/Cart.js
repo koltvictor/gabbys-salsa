@@ -23,8 +23,6 @@ export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, 
         });
     };
 
-
-
     const onApprove = (data, actions) => {
         return actions.order.capture().then(history.push('/thankyou'));
     };
@@ -47,8 +45,8 @@ export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, 
                         <div>{item.name}</div>
                         <br/>
                         <div>
-                            <button onClick={()=>handleAddToCart(item)}> + </button>
-                            <button onClick={()=>handleRemoveFromCart(item)}> - </button>
+                            <button className="addButton" onClick={()=>handleAddToCart(item)}> + </button>
+                            <button className="removeButton" onClick={()=>handleRemoveFromCart(item)}> - </button>
                         </div><br/>
                         <div>
                             {item.qty} x ${item.price.toFixed(2)}
