@@ -45,7 +45,7 @@ export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, 
                 
                 <div className="emptyCart">
                     {items.length === 0 && <div className="emptyCart"> Your Cart is Empty </div> }
-                    <button className="removeButton" onClick={() => deleteItem()}>Clear Cart</button>
+                    
                 </div>
                 
                 {items.map((item) => (
@@ -62,7 +62,9 @@ export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, 
                             {item.qty} x ${item.price.toFixed(2)}
                         </div>
                     </div>
-                ))} 
+                ))} <br/><br/><div className="buttonPosition">
+                <button className="emptyCartButton" onClick={() => deleteItem()}>Clear Cart</button>
+                </div>
             {items !== 0 && (
                 <div className="checkoutEnd">
                     <hr />
