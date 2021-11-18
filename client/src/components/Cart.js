@@ -1,14 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import {useHistory} from 'react-router-dom';
 
-export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, currentUser, items, 
-    // count, setCount
-}) {
+export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, currentUser, items}) {
     
-    // console.log(count)
-
-
+    const things = JSON.parse(localStorage.getItem('cartItems'))
+    console.log(things)
 
     const itemsPrice = items.reduce((a,c) => a + c.price * c.qty, 0)
     const shippingPrice = items < 7 ? 0 : 20;
@@ -29,21 +26,28 @@ export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, 
         });
     };
 
+    function deleteItem() {
+        localStorage.removeItem('cartItems')
+        history.push('/products')
+        window.location.reload()
+    }
+
     const onApprove = (data, actions) => {
         return actions.order.capture().then(history.push('/thankyou'));
     };
 
     const PayPalButton = window.paypal.Buttons.driver("react", { React, ReactDOM });
-
-    console.log(items)
     
     return(
             <div className="checkoutStart">
                 <h1 className="cartHeader">{currentUser.name}'s Cart</h1>
                 <div className="cartContainer">
+                
                 <div className="emptyCart">
                     {items.length === 0 && <div className="emptyCart"> Your Cart is Empty </div> }
+                    <button className="removeButton" onClick={() => deleteItem()}>Clear Cart</button>
                 </div>
+                
                 {items.map((item) => (
                     <div key={item.id} className="cartItem"> 
                         <img src={item.image} alt={item.name} height="100" width="100"></img>
@@ -86,5 +90,6 @@ export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, 
                 </div>
             )}
             </div>
+            
         </div>
             )}
