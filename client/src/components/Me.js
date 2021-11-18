@@ -44,13 +44,13 @@ export default function Me({ currentUser, setCurrentUser }) {
                 <h1 className="accountHead">{currentUser.name}'s Account Info</h1>
             </div>
             <div className="accountWrapper">
+                <div className="accountInfo">
                 <h3>Username:</h3>
                 <p>{currentUser.username}</p>
                 <h3>Email on file:</h3>
                 <p>{currentUser.email}</p><br /><br/>
-
-                <h3>{currentUser.name}'s Password Reset</h3>
-                <p>If you would like to reset your password, please fill out below.</p>
+                
+                <h3>Change your password:</h3>
                 <form onSubmit={handleUpdatePassword}>
                 <p>
                     <label className='label'>
@@ -82,7 +82,7 @@ export default function Me({ currentUser, setCurrentUser }) {
                     </p>
                     <button className="resetPasswordButton">Reset Password</button>
                 </form>
-                
+                </div>
             </div>
         </div>
     );

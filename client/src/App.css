@@ -493,6 +493,10 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6);
 }
 
+.accountInfo{
+  text-align: center;
+}
+
 .resetPasswordButton {
   display: inline-block;
   padding: 0.35em 1.2em;
@@ -504,7 +508,7 @@
   font-weight: 300;
   transition: all 0.2s;
   background-color:transparent;
-  margin-left: 20rem;
+  /* margin-left: 20rem; */
 }
 
 .resetPasswordButton:hover {
