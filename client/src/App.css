@@ -126,6 +126,14 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6);
 }
 
+.labelTooRight{
+  margin-left: -1.8rem;
+}
+
+.labelTooTooRight{
+  margin-left: -2.5rem;
+}
+
 .inputField{
   background:transparent;
   margin-left: 2rem;
@@ -190,7 +198,7 @@
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 .homePageTextWrapper {

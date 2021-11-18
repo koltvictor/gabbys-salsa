@@ -51,6 +51,7 @@ export default function SignUp({ setCurrentUser}) {
             <form onSubmit={handleSubmit}>
                     <h1>Sign Up</h1>
                     <p>
+                        
                     <label className='label'>
                             Name
                     </label>
@@ -61,8 +62,10 @@ export default function SignUp({ setCurrentUser}) {
                         onChange={e => setName(e.target.value)}
                         className="inputField"
                     />
+                    
                     </p>
                     <p>
+                    <div className="labelTooRight">
                     <label className='label'>
                         Username
                     </label>
@@ -73,6 +76,7 @@ export default function SignUp({ setCurrentUser}) {
                         onChange={(e) => setUsername(e.target.value)}
                         className="inputField"
                     />
+                    </div>
                     </p>
 
                     <p>
@@ -89,6 +93,7 @@ export default function SignUp({ setCurrentUser}) {
                     </p>
 
                     <p>
+                    <div className="labelTooRight">
                     <label className='label'>
                         Password
                     </label>
@@ -99,9 +104,11 @@ export default function SignUp({ setCurrentUser}) {
                         onChange={(e) => setPassword(e.target.value)}
                         className="inputField"
                     />
+                    </div>
                     </p>
 
                     <p>
+                        <div className="labelTooTooRight">
                     <label className='label'>
                         Confirm Password
                     </label>
@@ -113,6 +120,7 @@ export default function SignUp({ setCurrentUser}) {
                         className="inputField"
                     />
                     <button onClick={togglePassword} className="togglePassword">👁️</button>
+                    </div>
                     </p>
                     
                     <p><Link className="loginSignupButton" to="/api/login">⬅ Login</Link><button type="submit" className="loginButton">Sign Up</button></p>
