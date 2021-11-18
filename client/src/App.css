@@ -174,24 +174,29 @@
 }
 
 .homeImg {
-  background-attachment: fixed;
+  /* background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: contain; */
   width: 100%;
-  min-height: 20vh;
-  display: fixed;
-  flex-direction: column;
-  align-items: center;
+  /* height: 55%; */
+  /* min-height: 20vh; */
+  /* padding-top: 30vh; */
+  /* display: relative; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  border: 1px solid black;
 }
 
 .homeWrapper{
-  padding-top: 20vh;
-  background-image: url('https://i.imgur.com/2grsZWy.png');
-  min-height: 100vh;
+  background-image: url('https://i.imgur.com/PSF02hd.png');
+  /* min-height: 100vh; */
+  background-repeat: no-repeat;
+  padding-top: 50vh;
+  background-attachment: fixed;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 50vh;
 }
 
 .homePageTextWrapper {
@@ -254,7 +259,7 @@
   color: indigo;
   font-family: Noteworthy;
   font-size: 2rem;
-  text-shadow: 2px 2px black;
+  text-shadow: 1px 1px black;
   font-weight: bold;
 }
 
