@@ -28,7 +28,7 @@ export default function App() {
       })
   }, [setCurrentUser])
 
-  if(!authChecked) return <div>NOPE!</div>
+  if(!authChecked) return <div>Loading ...</div>
 
   
   return (
