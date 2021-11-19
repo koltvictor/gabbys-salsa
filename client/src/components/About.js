@@ -3,14 +3,7 @@ export default function About ({currentUser}) {
         <div className="about">
             <h1 className="aboutHead">About Gabby</h1>
             <p className="aboutBody">
-            <strong>Hi, {currentUser.name}</strong>!  And welcome to Gabby's Salsa!  Hold on to your hat, because Gabby uses the freshest, highest quality ingredients to create the best salsas you can imagine.  They're all handmade, small batches.  She's kind of remarkable.<br/><br/>
-                La Mexicana is a maker of salsas made with farm-fresh ingredients. We source our ingredients from farms that grow the freshest vegetables year ’round — firm sun-ripened tomatoes, crisp onion, zesty jalapeño, and fresh cilantro. 
-                Our farms are close to our kitchens, so when the crated veggies arrive, we work quickly to capture all the goodness, texture, and flavor. We chop, blend, season, and pack in 48 hours. This gives you a product that­’s perfect with chips or as an accompaniment to your favorite recipes.
-<br/><br/>
-    ITALIAN ROSE GARLIC PRODUCTS LLC
-    Italian Rose Garlic Products LLC is a manufacturer and distributor of salsas, dips, sauces, and spreads for retail stores and restaurants.
-<br/><br/>
-    Italian Rose was founded in 1979, and for over 30 years we have built our business based on one simple concept… we can deliver a superior flavor experience that customers will remember!
+            <strong>Hi, {currentUser.name}</strong>!  Let me introduce you to the brains and style of the operation: <strong>Gabby</strong>.  Born and raised in Las Vegas, Gabby grew up learning how to cook Mexican meals by helping her mom in the kitchen. She painstakingly learned the ins-and-outs of traditional Mexican cooking and developed her own flair over the decades.  Salsa Verde has always been a traditional part of Gabby's family's meals and over the years, the recipe has been developed into what it is today! Still one of the musts in Gabby's household, she is so thrilled to welcome everyone to bring the recipe into their own family gatherings.  The Red Salsa is the newest addition to Gabby's salsa must-haves.  Savory and delicious, all of Gabby's Salsas are traditional, delectible, and delicious.  Guaranteed to have the freshest ingredients in every batch with <strong>big</strong> flavor!
             </p>
             <img src="http://s3.wp.wsu.edu/uploads/sites/2055/2017/07/iStock-477239111-1024x683.jpg" alt="salsa" className="aboutImg"/>
         </div>)
