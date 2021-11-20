@@ -5,7 +5,6 @@ import {useHistory} from 'react-router-dom';
 export default function Cart({cartItems, handleAddToCart, handleRemoveFromCart, currentUser, items}) {
     
     const things = JSON.parse(localStorage.getItem('cartItems'))
-    console.log(things)
 
     const itemsPrice = items.reduce((a,c) => a + c.price * c.qty, 0)
     const shippingPrice = items < 7 ? 0 : 20;

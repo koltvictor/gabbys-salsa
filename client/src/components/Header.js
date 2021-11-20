@@ -19,6 +19,9 @@ export default function Header({currentUser, handleLogout, items}) {
                 <Link className="navLink" to="/cart">Cart</Link>
                 )}
                 <Link className="navLink" to='/' onClick={handleLogout}>Logout</Link>
+                {currentUser.id === 1 && (
+                    <Link className="navLink" to="/admin">Admin</Link>
+                )}
             </div>
             <div className="footer">
             </div>

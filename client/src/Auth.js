@@ -11,6 +11,7 @@ import Me from './components/Me'
 import Faqs from './components/Faqs'
 import Cart from './components/Cart'
 import ThankYou from './components/ThankYou'
+import Admin from './components/Admin'
 
 export default function Auth({ currentUser, setCurrentUser }) {
     const [cartItems, setCartItems] = useState([])
@@ -77,7 +78,8 @@ export default function Auth({ currentUser, setCurrentUser }) {
                 />
             </Route>
             <Route exact path="/products">
-                <ProductList currentUser={currentUser} 
+                <ProductList 
+                currentUser={currentUser} 
                 handleAddToCart={handleAddToCart}
                 productList={productList}
                 cartItems={cartItems} />
@@ -112,6 +114,14 @@ export default function Auth({ currentUser, setCurrentUser }) {
             <Route exact path='/thankyou'>
                 <ThankYou 
                 currentUser={currentUser}
+                />
+            </Route>
+            <Route exact path="/admin">
+                <Admin 
+                currentUser={currentUser}
+                productList={productList}
+                cartItems={cartItems}
+                setProductList={setProductList}
                 />
             </Route>
         </Switch>

@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     get '/products', to: 'products#index'
 
     resources :users, only: [:index, :show, :create, :update, :destroy]
+
+    resources :products, only: [:index, :show, :create, :update, :destroy]
     
     get '/me', to: 'users#show'
 
