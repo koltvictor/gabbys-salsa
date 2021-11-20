@@ -1,36 +1,61 @@
-import { ContactPhoneOutlined } from '@material-ui/icons'
-import React from 'react'
+import React, {useState} from 'react'
 import ProductCard from './ProductCard'
 
-export default function Admin ({productList, currentUser, cartItems, setProductList}) {
+export default function Admin ({adminDelete, productList, currentUser, cartItems, setProductList}) {
 
-    function adminDelete(){
-        const itemExist = cartItems.find(x => x.id === product.id)
-            fetch(`/api/products`, {
-              method: 'DELETE',
-            })
-              .then(res => {
-                if (res.ok) {
-                  setProductList()
-                }
-              })
-          };
+    const [name, setName] = useState('')
+    const [username, setUsername] = useState('')
+    const [userId, setUserId] = useState('')
 
-
+    console.log(productList)
 
     const product = productList.map((product) => {
         return(
+            <div>
             <ProductCard
                 key={product.id}
-                product={product} 
+                product={product}
             />
+            <button onClick={() => adminDelete()}>Delete</button>
+            </div>
         )})
+        console.log(currentUser.id)
     return(
         <div className="adminWrapper">
             <div>
                 {product}
-                <button onClick={adminDelete}>Delete</button>
+                
             </div>
+            <form className="adminForm">
+                <p>
+                <div>
+                <label className='label'>
+                    Name
+                </label>
+                <input
+                    type="text"
+                    name="name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    className="inputField"
+                />
+                </div>
+                </p>
+                <p>
+                <div>
+                <label className='label'>
+                    user
+                </label>
+                <input
+                    type="text"
+                    name="name"
+                    value={userId}
+                    onChange={(e) => setUserId(currentUser.id)}
+                    className="inputField"
+                />
+                </div>
+                </p>
+            </form>
         </div>
     )
 }

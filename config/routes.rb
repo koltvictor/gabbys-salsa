@@ -12,6 +12,10 @@ Rails.application.routes.draw do
 
     patch '/me', to: 'passwords#update'
 
+    post '/admin', to: 'products#create'
+
+    delete 'admin', to: 'products#destroy'
+
     # get '/me', to: 'orders#index'
 
     post '/signup', to: 'users#create'

@@ -12,6 +12,7 @@ import Faqs from './components/Faqs'
 import Cart from './components/Cart'
 import ThankYou from './components/ThankYou'
 import Admin from './components/Admin'
+import ProductCard from './components/ProductCard'
 
 export default function Auth({ currentUser, setCurrentUser }) {
     const [cartItems, setCartItems] = useState([])
@@ -24,6 +25,17 @@ export default function Auth({ currentUser, setCurrentUser }) {
         .then((r) => r.json())
         .then((data) => setProductList(data))
     }, [])
+
+    const product = productList.map((product) => {
+      return(
+          <div>
+          <ProductCard
+              key={product.id}
+              product={product}
+          />
+          <button onClick={() => adminDelete(product.id)}>Delete</button>
+          </div>
+      )})
 
     function handleAddToCart(product) {
       const itemExist= cartItems.find(x => x.id === product.id)
@@ -63,6 +75,19 @@ export default function Auth({ currentUser, setCurrentUser }) {
           })
       };
 
+      function adminDelete(){
+        const itemExist = cartItems.find(x => x.id === product.id)
+          if (itemExist) {
+              fetch(`/api/products/id`, {
+                method: 'DELETE',
+              })
+                .then(res => {
+                  if (res.ok) {
+                    setProductList(productList)
+                  }
+                })
+            };
+          }
     return (
     <div>
       
@@ -122,6 +147,7 @@ export default function Auth({ currentUser, setCurrentUser }) {
                 productList={productList}
                 cartItems={cartItems}
                 setProductList={setProductList}
+                adminDelete={adminDelete}
                 />
             </Route>
         </Switch>
