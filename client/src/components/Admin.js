@@ -54,7 +54,7 @@ export default function Admin ({adminDelete, productList, currentUser, cartItems
 
     return(
         <div className="adminWrapper">
-            <div className="productList">
+            <div className="adminProducts">
                 {product}
                 
             </div><br/><br/><br/><br/><br/><br/><br/><br/>
