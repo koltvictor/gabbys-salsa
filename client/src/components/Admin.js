@@ -44,9 +44,11 @@ export default function Admin ({adminDelete, productList, currentUser, cartItems
         fetch(`/api/products/${id}`, {
           method: 'DELETE'
         })
-        .then(fetch('/admin')
-          .then(resp => resp.json())
-          .then(user => console.log(user)))
+        .then(res => {
+            if (res.ok) {
+              window.location.reload()
+            }
+          })
         
       };
 
