@@ -124,7 +124,7 @@ export default function Admin ({adminDelete, productList, currentUser, cartItems
                 </p>
 
                 <button type="submit">Submit</button>
-            </form>
+            </form><br/><br/><br/><br/><br/><br/><br/>
         </div>
     )
 }
