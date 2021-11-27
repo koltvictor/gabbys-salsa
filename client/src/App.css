@@ -699,12 +699,12 @@
 }
 
 .adminForm{
-  background-color: rgba(15, 176, 230, 0.5);
+  background-color: rgba(15, 176, 230, 1);
   padding: 3rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6);
-  margin-left: 30rem;
-  margin-right: 30rem;
-  
+  margin-left: 10rem;
+  margin-right: 10rem;
+  text-align: center;
 }
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */

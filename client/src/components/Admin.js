@@ -19,7 +19,6 @@ export default function Admin ({adminDelete, productList, currentUser, cartItems
             <button onClick={() => handleDelete(product.id)}>Delete</button>
             </div>
         )})
-        console.log(product)
     
     function handleSubmit(e) {
         e.preventDefault()
@@ -54,7 +53,7 @@ export default function Admin ({adminDelete, productList, currentUser, cartItems
 
     return(
         <div className="adminWrapper">
-            <div className="adminProducts">
+            <div className="flip-card-inner">
                 {product}
                 
             </div><br/><br/><br/><br/><br/><br/><br/><br/>
@@ -71,6 +70,7 @@ export default function Admin ({adminDelete, productList, currentUser, cartItems
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     // className="inputField"
+                    required
                 />
                 </div>
                 </p>
@@ -86,6 +86,7 @@ export default function Admin ({adminDelete, productList, currentUser, cartItems
                     value={image}
                     onChange={(e) => setImage(e.target.value)}
                     // className="inputField"
+                    required
                 />
                 </div>
                 </p>
@@ -101,6 +102,7 @@ export default function Admin ({adminDelete, productList, currentUser, cartItems
                     value={price}
                     onChange={(e) => setPrice(e.target.value)}
                     // className="inputField"
+                    required
                 />
                 </div>
                 </p>
@@ -116,6 +118,7 @@ export default function Admin ({adminDelete, productList, currentUser, cartItems
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
                     // className="inputField"
+                    required
                 />
                 </div>
                 </p>
