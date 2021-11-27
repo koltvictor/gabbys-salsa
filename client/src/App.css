@@ -697,3 +697,12 @@
 .adminWrapper{
   padding-top: 20vh;
 }
+
+.adminForm{
+  background-color: rgba(15, 176, 230, 0.5);
+  border-radius: 200rem;
+  padding: 3rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6);
+  margin-left: 30rem;
+  margin-right: 30rem;
+}

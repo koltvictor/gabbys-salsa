@@ -4,10 +4,10 @@ import ProductCard from './ProductCard'
 export default function Admin ({adminDelete, productList, currentUser, cartItems, setProductList}) {
 
     const [name, setName] = useState('')
-    const [username, setUsername] = useState('')
-    const [userId, setUserId] = useState('')
-
-    console.log(productList)
+    const [image, setImage] = useState('')
+    const [description, setDescription] = useState('')
+    const [price, setPrice] = useState('')
+    const [user_id, setUserId] = useState('')
 
     const product = productList.map((product) => {
         return(
@@ -16,17 +16,48 @@ export default function Admin ({adminDelete, productList, currentUser, cartItems
                 key={product.id}
                 product={product}
             />
-            <button onClick={() => adminDelete()}>Delete</button>
+            <button onClick={() => handleDelete(product.id)}>Delete</button>
             </div>
         )})
-        console.log(currentUser.id)
+        console.log(product)
+    
+    function handleSubmit(e) {
+        e.preventDefault()
+        fetch('/api/products', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify({
+                name: name,
+                image: image,
+                description: description,
+                price: price,
+                user_id: currentUser.id
+            }),
+        })
+         .then((r) => r.json())
+         .then((newProduct) => setProductList([...productList, newProduct]))
+    }
+
+    function handleDelete(id) {
+        fetch(`/api/products/${id}`, {
+          method: 'DELETE'
+        })
+        .then(fetch('/admin')
+          .then(resp => resp.json())
+          .then(user => console.log(user)))
+        
+      };
+
     return(
         <div className="adminWrapper">
-            <div>
+            <div className="productList">
                 {product}
                 
-            </div>
-            <form className="adminForm">
+            </div><br/><br/><br/><br/><br/><br/><br/><br/>
+            <form className="adminForm" onSubmit={handleSubmit}>
+                <h3>Add New Product</h3>
                 <p>
                 <div>
                 <label className='label'>
@@ -37,24 +68,57 @@ export default function Admin ({adminDelete, productList, currentUser, cartItems
                     name="name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="inputField"
+                    // className="inputField"
                 />
                 </div>
                 </p>
+                
                 <p>
                 <div>
                 <label className='label'>
-                    user
+                    Image URL
                 </label>
                 <input
                     type="text"
-                    name="name"
-                    value={userId}
-                    onChange={(e) => setUserId(currentUser.id)}
-                    className="inputField"
+                    name="image"
+                    value={image}
+                    onChange={(e) => setImage(e.target.value)}
+                    // className="inputField"
                 />
                 </div>
                 </p>
+                
+                <p>
+                <div>
+                <label className='label'>
+                    Price
+                </label>
+                <input
+                    type="number"
+                    name="price"
+                    value={price}
+                    onChange={(e) => setPrice(e.target.value)}
+                    // className="inputField"
+                />
+                </div>
+                </p>
+
+                <p>
+                <div>
+                <label className='label'>
+                    Description
+                </label>
+                <input
+                    type="text"
+                    name="description"
+                    value={description}
+                    onChange={(e) => setDescription(e.target.value)}
+                    // className="inputField"
+                />
+                </div>
+                </p>
+
+                <button type="submit">Submit</button>
             </form>
         </div>
     )

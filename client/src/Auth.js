@@ -26,17 +26,6 @@ export default function Auth({ currentUser, setCurrentUser }) {
         .then((data) => setProductList(data))
     }, [])
 
-    const product = productList.map((product) => {
-      return(
-          <div>
-          <ProductCard
-              key={product.id}
-              product={product}
-          />
-          <button onClick={() => adminDelete(product.id)}>Delete</button>
-          </div>
-      )})
-
     function handleAddToCart(product) {
       const itemExist= cartItems.find(x => x.id === product.id)
       if (itemExist) {
@@ -75,19 +64,19 @@ export default function Auth({ currentUser, setCurrentUser }) {
           })
       };
 
-      function adminDelete(){
-        const itemExist = cartItems.find(x => x.id === product.id)
-          if (itemExist) {
-              fetch(`/api/products/id`, {
-                method: 'DELETE',
-              })
-                .then(res => {
-                  if (res.ok) {
-                    setProductList(productList)
-                  }
-                })
-            };
-          }
+      // function adminDelete(){
+      //   const itemExist = cartItems.find(x => x.id === product.id)
+      //     if (itemExist) {
+      //         fetch(`/api/products/id`, {
+      //           method: 'DELETE',
+      //         })
+      //           .then(res => {
+      //             if (res.ok) {
+      //               setProductList(productList)
+      //             }
+      //           })
+      //       };
+      //     }
     return (
     <div>
       
@@ -147,7 +136,6 @@ export default function Auth({ currentUser, setCurrentUser }) {
                 productList={productList}
                 cartItems={cartItems}
                 setProductList={setProductList}
-                adminDelete={adminDelete}
                 />
             </Route>
         </Switch>
