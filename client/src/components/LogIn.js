@@ -51,7 +51,7 @@ const handleSubmit = (e) => {
         <p>
           <div className="loginUser">
           <label className="label">
-            Username
+            
           </label>
           <input
             type="text"
@@ -59,14 +59,16 @@ const handleSubmit = (e) => {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             className="inputField"
+            placeholder="Username"
             required
           />
           </div>
         </p>
 
         <p>
+          
           <label className="label">          
-            Password
+            
           </label>
           <input
             type={passwordShown ? 'text' : 'password'}
@@ -74,16 +76,15 @@ const handleSubmit = (e) => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             className="inputField"
+            placeholder="Password"
             required
           />
+               
           <button onClick={togglePassword} className="togglePassword">👁️</button>
-          
+
         </p>
-        <button className="loginButton" type="submit">Log In</button>
-        <br/><br/>
-        <hr/>
-        <br/>
-        <Link className="loginButton" to="/signup">Sign Up</Link><br/><br/>
+        <button className="loginSignupButton" type="submit">Log In</button>
+        <Link className="loginButton" to="/signup">Sign Up ➡</Link><br/><br/>
         </div>
         
 

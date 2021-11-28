@@ -53,7 +53,7 @@ export default function SignUp({ setCurrentUser}) {
                     <p>
                         
                     <label className='label'>
-                            Name
+                            
                     </label>
                     <input 
                         type="text" 
@@ -61,13 +61,14 @@ export default function SignUp({ setCurrentUser}) {
                         value={name} 
                         onChange={e => setName(e.target.value)}
                         className="inputField"
+                        placeholder="Name"
                     />
                     
                     </p>
                     <p>
-                    <div className="labelTooRight">
+                    <div>
                     <label className='label'>
-                        Username
+                        
                     </label>
                     <input
                         type="text"
@@ -75,13 +76,14 @@ export default function SignUp({ setCurrentUser}) {
                         value={username}
                         onChange={(e) => setUsername(e.target.value)}
                         className="inputField"
+                        placeholder="Username"
                     />
                     </div>
                     </p>
 
                     <p>
                     <label className='label'>
-                        Email
+                        
                     </label>
                     <input
                         type="text"
@@ -89,13 +91,14 @@ export default function SignUp({ setCurrentUser}) {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         className="inputField"
+                        placeholder="Email"
                     />
                     </p>
 
                     <p>
-                    <div className="labelTooRight">
+                    <div>
                     <label className='label'>
-                        Password
+                        
                     </label>
                     <input
                         type={passwordShown ? 'text' : 'password'}
@@ -103,14 +106,15 @@ export default function SignUp({ setCurrentUser}) {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         className="inputField"
+                        placeholder="Password"
                     />
                     </div>
                     </p>
 
                     <p>
-                        <div className="labelTooTooRight">
+                        <div className="labelTooLeft">
                     <label className='label'>
-                        Confirm Password
+                        
                     </label>
                     <input
                         type={passwordShown ? 'text' : 'password'}
@@ -118,6 +122,7 @@ export default function SignUp({ setCurrentUser}) {
                         value={passwordConfirmation}
                         onChange={(e) => setPasswordConfirmation(e.target.value)}
                         className="inputField"
+                        placeholder="Confirm Password"
                     />
                     <button onClick={togglePassword} className="togglePassword">👁️</button>
                     </div>

@@ -38,31 +38,31 @@
 }
 
 .loginButton {
-  background-color: transparent;
+  background-color: rgba(238, 82, 10, .5);
   border-style: solid;
   border-color: white;
   color: white;
   padding: 10px;
   font-size: 18px;
   font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', sans-serif;
   cursor: pointer;
   margin-top: 20px;
 }
 
 .loginButton:hover {
-  background-color: #61dafb;
+  background-color: rgba(238, 82, 10, .9);
   color: white;
   padding: 10px;
   font-size: 18px;
   font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
   cursor: pointer;
   margin-top: 20px;
 }
 
 .loginSignupButton{
-  background-color: transparent;
+  background-color: rgba(238, 82, 10, .5);
   border-style: solid;
   border-color: white;
   color: white;
@@ -76,7 +76,7 @@
 }
 
 .loginSignupButton:hover {
-  background-color: #61dafb;
+  background-color: rgba(238, 82, 10, .9);
   color: white;
   padding: 10px;
   font-size: 18px;
@@ -97,15 +97,19 @@
 }
 
 .login{
+  background-image: url('https://img.myloview.com/posters/simple-clean-fresh-yellow-wave-background-design-template-vector-700-199899821.jpg');
+  background-size: cover;
   text-align: center;
   padding: 10rem;
-  background-color: rgba(10, 238, 181, 0.61);
-  color: rgb(10, 175, 126);
-  font-family: Noteworthy;
+  /* background-color: rgba(10, 238, 181, 0.61); */
+  color: rgb(255, 115, 0);
+  font-family: 'Noteworthy';
   font-size: 1rem;
   font-weight: bold;
-  border-radius:200rem;
+  /* border-radius:200rem; */
   margin: 18rem;
+  margin-right: 40rem;
+  margin-left: 40rem;
   box-shadow: 0 10px 20px 0 rgb(0, 0, 0);
 }
 
@@ -113,33 +117,38 @@
   margin-left: -3rem;
 }
 
+
 .signup{
+  background-image: url('https://img.myloview.com/posters/simple-clean-fresh-yellow-wave-background-design-template-vector-700-199899821.jpg');
+  background-size: cover;
   text-align: center;
   padding: 10rem;
-  background-color: rgba(10, 238, 181, 0.61);
-  color: rgb(10, 175, 126);
-  font-family: Noteworthy;
+  /* background-color: rgba(10, 238, 181, 0.61); */
+  color: rgb(255, 115, 0);
+  font-family: 'Noteworthy';
   font-size: 1rem;
   font-weight: bold;
-  border-radius:200rem;
+  /* border-radius:200rem; */
   margin: 18rem;
+  margin-right: 40rem;
+  margin-left: 40rem;
   box-shadow: 0 10px 20px 0 rgb(0, 0, 0);
 }
 
-.labelTooRight{
-  margin-left: -1.8rem;
-}
-
-.labelTooTooRight{
-  margin-left: -2.5rem;
+.labelTooLeft{
+  margin-right: -2.75rem;
 }
 
 .inputField{
   background:transparent;
   margin-left: 2rem;
   padding: .3rem;
-  color: white;
-  font-size: 1rem;
+  color: black;
+}
+
+.inputField::placeholder{
+  color: rgba(0, 0, 0, .5);
+  font-weight: bold;
 }
 
 .fullHeader{
@@ -759,4 +768,55 @@
   background-color: white;
   color: black;
   transform: rotateY(180deg);
+}
+
+
+
+
+#button-7 {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#button-7 a {
+  position: relative;
+  left: 0;
+  transition: all .35s ease-Out;
+}
+
+#dub-arrow {
+  width: 100%;
+  height: 100%;
+  background: #BFC0C0;
+  left: -200px;
+  position: absolute;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .35s ease-Out;
+  bottom: 0;
+}
+
+#button-7 img {
+  width: 20px;
+  height: auto;
+}
+
+#button-7:hover #dub-arrow {
+  left: 0;
+}
+
+#button-7:hover a {
+  left: 150px;
+}
+
+@media screen and (min-width:1000px) {
+  h1 {
+    font-size: 2.2em;
+  }
+  #container {
+    width: 50%;
+  }
 }
