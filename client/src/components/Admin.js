@@ -62,15 +62,16 @@ export default function Admin ({adminDelete, productList, currentUser, cartItems
                 <p>
                 <div>
                 <label className='label'>
-                    Name
+                    
                 </label>
                 <input
                     type="text"
                     name="name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    // className="inputField"
+                    className="inputField"
                     required
+                    placeholder="Name"
                 />
                 </div>
                 </p>
@@ -78,15 +79,16 @@ export default function Admin ({adminDelete, productList, currentUser, cartItems
                 <p>
                 <div>
                 <label className='label'>
-                    Image URL
+                    
                 </label>
                 <input
                     type="text"
                     name="image"
                     value={image}
                     onChange={(e) => setImage(e.target.value)}
-                    // className="inputField"
+                    className="inputField"
                     required
+                    placeholder="Image URL"
                 />
                 </div>
                 </p>
@@ -94,15 +96,18 @@ export default function Admin ({adminDelete, productList, currentUser, cartItems
                 <p>
                 <div>
                 <label className='label'>
-                    Price
+                    
                 </label>
                 <input
                     type="number"
+                    step="0.1"
+                    min="0"
                     name="price"
                     value={price}
                     onChange={(e) => setPrice(e.target.value)}
-                    // className="inputField"
+                    className="inputField"
                     required
+                    placeholder="Price"
                 />
                 </div>
                 </p>
@@ -110,21 +115,22 @@ export default function Admin ({adminDelete, productList, currentUser, cartItems
                 <p>
                 <div>
                 <label className='label'>
-                    Description
+                    
                 </label>
                 <input
                     type="text"
                     name="description"
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
-                    // className="inputField"
+                    className="inputField"
                     required
+                    placeholder="Description"
                 />
                 </div>
                 </p>
 
                 <button type="submit">Submit</button>
-            </form>
+            </form><br/><br/><br/><br/><br/><br/><br/><br/>
         </div>
     )
 }

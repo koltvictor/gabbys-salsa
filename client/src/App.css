@@ -54,7 +54,7 @@
  
  .loginButton:hover{
    color: 000;
-   background-color: rgba(238, 82, 10, .4);
+   /* background-color: rgba(238, 82, 10, .4); */
    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6);
  }
  
@@ -65,6 +65,7 @@
 
 
 .loginSignupButton{
+  color: 000;
   display: inline-block;
   padding: .35em 1.2em;
   border: 0.1em solid #FFFFFF;
@@ -82,7 +83,7 @@
 }
 
 .loginSignupButton:hover {
-  background-color: rgba(238, 82, 10, .4);
+  /* background-color: rgba(238, 82, 10, .4); */
   color: 000;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6);
 }
@@ -196,6 +197,7 @@
   padding-bottom: 1rem;
   color: white;
   text-decoration: underline;
+  font-family: sans-serif;
 }
 
 .navLink:link{
@@ -779,8 +781,8 @@
 .flip-card-front {
   background-color: white;
   color: black;
-  font-family: Noteworthy;
-  font-weight: bold;
+  font-family: sans-serif;
+  font-weight: 500;
 }
 
 /* Style the back side */
@@ -788,4 +790,6 @@
   background-color: transparent;
   color: black;
   transform: rotateY(180deg);
+  font-family: sans-serif;
+  font-weight: 300;
 }
