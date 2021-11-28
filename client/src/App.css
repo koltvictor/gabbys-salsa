@@ -98,15 +98,15 @@
 
 .login{
   text-align: center;
-  padding: 1rem;
-  background-color: rgba(0, 0, 0, 1);
-  color: hotpink;
+  padding: 10rem;
+  background-color: rgba(10, 238, 181, 0.61);
+  color: rgb(10, 175, 126);
   font-family: Noteworthy;
   font-size: 1rem;
   font-weight: bold;
-  /* border-radius:2rem; */
-  margin: 8rem;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6);
+  border-radius:200rem;
+  margin: 18rem;
+  box-shadow: 0 10px 20px 0 rgb(0, 0, 0);
 }
 
 .loginUser{
@@ -115,15 +115,15 @@
 
 .signup{
   text-align: center;
-  padding: 1rem;
-  background-color: #000;
-  color: hotpink;
+  padding: 10rem;
+  background-color: rgba(10, 238, 181, 0.61);
+  color: rgb(10, 175, 126);
   font-family: Noteworthy;
   font-size: 1rem;
   font-weight: bold;
-  /* border-radius:2rem; */
-  margin: 8rem;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6);
+  border-radius:200rem;
+  margin: 18rem;
+  box-shadow: 0 10px 20px 0 rgb(0, 0, 0);
 }
 
 .labelTooRight{
