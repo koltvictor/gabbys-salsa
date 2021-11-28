@@ -40,6 +40,10 @@ const handleSubmit = (e) => {
 
 
   return (
+    <div>
+    <div className="fullHeader">
+        <div className="header">Gabby's Salsa</div>
+    </div>
     <div className="login">
 
       <Redirect to='/' />
@@ -84,12 +88,13 @@ const handleSubmit = (e) => {
 
         </p>
         <button className="loginSignupButton" type="submit">Log In</button>
-        <Link className="loginButton" to="/signup">Sign Up ➡</Link><br/><br/>
+        <Link className="loginButton" to="/signup">Sign Up</Link><br/><br/>
         </div>
         
 
       </form>
       
+    </div>
     </div>
   );
 }

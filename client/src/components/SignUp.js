@@ -47,6 +47,10 @@ export default function SignUp({ setCurrentUser}) {
         })
     };
     return(
+        <div>
+            <div className="fullHeader">
+                <div className="header">Gabby's Salsa</div>
+            </div>
         <div className="signup">
             <form onSubmit={handleSubmit}>
                     <h1>Sign Up</h1>
@@ -128,12 +132,13 @@ export default function SignUp({ setCurrentUser}) {
                     </div>
                     </p>
                     
-                    <p><Link className="loginSignupButton" to="/api/login">⬅ Login</Link><button type="submit" className="loginButton">Sign Up</button></p>
+                    <p><Link className="loginSignupButton" to="/api/login">Login</Link><button type="submit" className="loginButton">Sign Up</button></p>
 
                     <p></p>
 
                 </form>
             
+        </div>
         </div>
     )
 }
