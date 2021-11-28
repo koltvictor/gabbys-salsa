@@ -145,7 +145,7 @@
 .fullHeader{
   position: fixed;
   width: 100%;
-  z-index: 500;
+  z-index: 1000;
 }
 
 .header{
@@ -252,6 +252,7 @@
 
 .productWrapper{
   padding-top: 20vh;
+  z-index:500;
 }
 
 .productHeader{
@@ -273,7 +274,6 @@
   margin-left: 4rem;
   margin-right: 4rem;
   border-radius: 2rem;
-  z-index: 1000;
 }
 
 .productCard{

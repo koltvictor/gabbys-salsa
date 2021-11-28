@@ -7,6 +7,7 @@ export default function Admin ({adminDelete, productList, currentUser, cartItems
     const [image, setImage] = useState('')
     const [description, setDescription] = useState('')
     const [price, setPrice] = useState('')
+    const [user_id, setUserId] = useState('')
 
     const product = productList.map((product) => {
         return(
@@ -123,7 +124,7 @@ export default function Admin ({adminDelete, productList, currentUser, cartItems
                 </p>
 
                 <button type="submit">Submit</button>
-            </form><br/><br/><br/><br/><br/><br/><br/>
+            </form>
         </div>
     )
 }
