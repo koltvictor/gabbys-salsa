@@ -1,15 +1,13 @@
-import React, {useState} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import {useHistory} from 'react-router-dom';
 
 export default function Cart({ handleAddToCart, handleRemoveFromCart, currentUser, items}) {
     
-    const things = JSON.parse(localStorage.getItem('cartItems'))
-
     const itemsPrice = items.reduce((a,c) => a + c.price * c.qty, 0)
     const shippingPrice = itemsPrice < 73 ? 20 : 40;
-    const totalPrice = itemsPrice + shippingPrice;
-    // const taxPrice = itemsPrice * .0825;
+    const taxPrice = itemsPrice * .0825;
+    const totalPrice = itemsPrice + shippingPrice + taxPrice;
 
     const history = useHistory();
 

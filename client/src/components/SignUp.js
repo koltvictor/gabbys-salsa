@@ -41,7 +41,8 @@ export default function SignUp({ setCurrentUser}) {
             } else {
             res.json().then(errors => {
                 setError()
-                console.log(errors)
+                alert(error)
+                console.log(error)
             })
             }
         })
@@ -50,6 +51,7 @@ export default function SignUp({ setCurrentUser}) {
         <div className="signup">
             <form onSubmit={handleSubmit}>
                     <h1>Sign Up</h1>
+                    <div>Get started with us today!  Create your account with Gabby by filling out the form below.</div><br/>   
                     <p>
                         
                     <label className='label'>
@@ -61,6 +63,7 @@ export default function SignUp({ setCurrentUser}) {
                         value={name} 
                         onChange={e => setName(e.target.value)}
                         className="inputField"
+                        required
                     />
                     
                     </p>
@@ -75,10 +78,10 @@ export default function SignUp({ setCurrentUser}) {
                         value={username}
                         onChange={(e) => setUsername(e.target.value)}
                         className="inputField"
+                        required
                     />
                     </div>
                     </p>
-
                     <p>
                     <label className='label'>
                         Email
@@ -89,6 +92,7 @@ export default function SignUp({ setCurrentUser}) {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         className="inputField"
+                        required
                     />
                     </p>
 
@@ -103,6 +107,7 @@ export default function SignUp({ setCurrentUser}) {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         className="inputField"
+                        required
                     />
                     </div>
                     </p>
@@ -118,12 +123,13 @@ export default function SignUp({ setCurrentUser}) {
                         value={passwordConfirmation}
                         onChange={(e) => setPasswordConfirmation(e.target.value)}
                         className="inputField"
+                        required
                     />
                     <button onClick={togglePassword} className="togglePassword">👁️</button>
                     </div>
                     </p>
                     
-                    <p><Link className="loginSignupButton" to="/api/login">⬅ Login</Link><button type="submit" className="loginButton">Sign Up</button></p>
+                    <p><Link className="loginSignupButton" to="/api/login">Already have an account? Login</Link><button type="submit" className="loginButton">Sign Up</button></p>
 
                     <p></p>
 
