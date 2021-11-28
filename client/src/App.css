@@ -163,6 +163,25 @@
   font-weight: bold;
 }
 
+.fullHeader1{
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header1{
+  text-align: center;
+  /* position: fixed; */
+  width: 100%;
+  padding: 1rem;
+  background-color: transparent;
+  color: rgb(255, 115, 0);
+  text-shadow: 2px 2px rgb(182, 86, 8);
+  font-family: Noteworthy;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
 .navigation {
   /* position: relative; */
   display: flex;

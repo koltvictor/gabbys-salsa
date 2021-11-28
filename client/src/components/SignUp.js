@@ -48,8 +48,8 @@ export default function SignUp({ setCurrentUser}) {
     };
     return(
         <div>
-            <div className="fullHeader">
-                <div className="header">Gabby's Salsa</div>
+            <div className="fullHeader1">
+                <div className="header1">Gabby's Salsa</div>
             </div>
         <div className="signup">
             <form onSubmit={handleSubmit}>

@@ -41,8 +41,8 @@ const handleSubmit = (e) => {
 
   return (
     <div>
-    <div className="fullHeader">
-        <div className="header">Gabby's Salsa</div>
+    <div className="fullHeader1">
+        <div className="header1">Gabby's Salsa</div>
     </div>
     <div className="login">
 
