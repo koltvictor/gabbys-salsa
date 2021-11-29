@@ -13,6 +13,13 @@
   }
 }
 
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -327,10 +334,10 @@
 }
 
 .productName{
-  font-size: 1.5rem;
   font-weight: bold;
   color: rgb(0, 0, 0);
-  font-family: Noteworthy;
+  font-family: sans-serif;
+  font-weight: 300;
 }
 
 .addToCartButton{

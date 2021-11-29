@@ -19,7 +19,7 @@ export default function ProductList ({productList, handleAddToCart}) {
             <div className="productList">
                 {product}
             </div>
-            <img classname="productsImg" src="https://images.sks-bottle.com/images/SalsaJars.jpg" alt="salsa jar"/>
+            <img className="productsImg" src="https://images.sks-bottle.com/images/SalsaJars.jpg" alt="salsa jar"/>
         </div>
     )
 }

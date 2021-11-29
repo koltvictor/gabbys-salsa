@@ -40,7 +40,6 @@ export default function SignUp({ setCurrentUser, setErrors, errorsList }) {
             } else {
             res.json().then(errors => {
                 setErrors(errors.errors)
-                console.log(errors)
             })
             }
         })

@@ -32,7 +32,6 @@ const handleSubmit = (e) => {
         } else {
           r.json().then(errors => {
             setErrors(errors.errors)
-            console.log(errors)
           })
         }
       })

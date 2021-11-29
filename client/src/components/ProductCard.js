@@ -8,7 +8,7 @@ export default function ProductCard({product, handleAddToCart}) {
             <div className="flip-card-inner">
                 <div className="flip-card-front">
                     <img className= "productImg" src={product.image} alt={product.name} />
-                    <div classname="productName">{product.name}<br/></div><br/>
+                    <div className="productName">{product.name}<br/></div><br/>
                 </div>
                 <div className="flip-card-back">
                     <br/>
