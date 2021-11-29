@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom'
 
-export default function SignUp({ setCurrentUser}) {
+export default function SignUp({ setCurrentUser, setErrors, errorsList }) {
 
     const [name, setName] = useState('');
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [passwordConfirmation, setPasswordConfirmation] = useState('');
     const [email, setEmail] = useState('');
-    const [error, setError] = useState('');
     const [passwordShown, setPasswordShown] = useState(false);
 
     const togglePassword = (e) => {
@@ -40,7 +39,7 @@ export default function SignUp({ setCurrentUser}) {
             })
             } else {
             res.json().then(errors => {
-                setError()
+                setErrors(errors.errors)
                 console.log(errors)
             })
             }
@@ -137,6 +136,9 @@ export default function SignUp({ setCurrentUser}) {
                     <p></p>
 
                 </form>
+                <div className="errors">
+                    {errorsList}
+                </div>
             
         </div>
         </div>

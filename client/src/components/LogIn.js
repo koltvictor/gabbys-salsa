@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Redirect, Link, useHistory } from 'react-router-dom'
 
 
-export default function LogIn({ setCurrentUser }) {
+export default function LogIn({ setCurrentUser, setErrors, errorsList }) {
 
   const history = useHistory();
   const [username, setUsername] = useState('');
@@ -31,6 +31,7 @@ const handleSubmit = (e) => {
           })
         } else {
           r.json().then(errors => {
+            setErrors(errors.errors)
             console.log(errors)
           })
         }
@@ -93,6 +94,9 @@ const handleSubmit = (e) => {
         
 
       </form>
+      <div className="errors"> 
+        {errorsList}
+      </div>
       
     </div>
     </div>
