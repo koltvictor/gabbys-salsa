@@ -291,8 +291,8 @@
   font-weight: bold;
   font-size: 3rem;
   background-color: #000000;
-  margin-left: 25rem;
-  margin-right: 25rem;
+  margin-left: 20rem;
+  margin-right: 20rem;
 }
 
 .events {
@@ -476,16 +476,11 @@
 }
 
 ::-webkit-input-placeholder{
-  color:black;
+  color:white;
 }
 
 ::-webkit-input{
-  color:black;
-  background-color:transparent;
-}
-
-::-webkit-input-active{
-  color:black;
+  color:white;
   background-color:transparent;
 }
 
