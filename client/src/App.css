@@ -368,6 +368,7 @@
  .productsImg {
   position: absolute;
   bottom: 0;
+  z-index: -1;
  }
 
 .about{
@@ -786,7 +787,7 @@
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  background-color: white;
+  background-color: transparent;
   color: black;
   font-family: sans-serif;
   font-weight: 500;

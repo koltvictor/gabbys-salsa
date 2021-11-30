@@ -9,7 +9,7 @@ class Api::SessionController < ApplicationController
             render json: @user,
             status: :ok
         else 
-            render json: { errors: ["Hmmm... we couldn't find that username or password. Please try again."] }, status: :not_found
+            render json: { errors: ["Hmmm ... we couldn't find that username or password. Please try again."] }, status: :not_found
         end 
     end 
 
