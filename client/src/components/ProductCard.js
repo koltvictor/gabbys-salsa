@@ -13,7 +13,7 @@ export default function ProductCard({product, handleAddToCart}) {
                 <div className="flip-card-back">
                     <br/>
                     <div >{product.description}<br/></div><br/>
-                    <div >${product.price}<br/></div><br/>
+                    <div >${product.price.toFixed(2)}<br/></div><br/>
                     <button className="addToCartButton" onClick={() => {handleAddToCart(product)}}>Add to Cart</button>
                 </div>
             </div>
