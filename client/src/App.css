@@ -54,7 +54,7 @@
   text-decoration: none;
   font-weight: 300;
   transition: all 0.2s;
-  background-color:transparent;
+  background-color:white;
   font-family: sans-serif;
   font-size: 1rem;
  }
@@ -76,7 +76,7 @@
   display: inline-block;
   padding: .35em 1.2em;
   border: 0.1em solid #FFFFFF;
-  background-color: transparent;
+  background-color: white;
   margin: .5em 0;
   margin-right: 2rem;
   border-radius: 0.12rem;
@@ -111,7 +111,7 @@
 }
 
 .login{
-  background-image: url('https://img.myloview.com/posters/simple-clean-fresh-yellow-wave-background-design-template-vector-700-199899821.jpg');
+  background-image: url('https://media-exp1.licdn.com/dms/image/C561BAQF_n51BJXEr0Q/company-background_10000/0/1614961474718?e=2159024400&v=beta&t=GrDRpTSHy3ppGixCCaxfj_aMjbPTSghpoe3no6Ilqyc');
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
@@ -130,7 +130,7 @@
 
 
 .signup{
-  background-image: url('https://img.myloview.com/posters/simple-clean-fresh-yellow-wave-background-design-template-vector-700-199899821.jpg');
+  background-image: url('https://media-exp1.licdn.com/dms/image/C561BAQF_n51BJXEr0Q/company-background_10000/0/1614961474718?e=2159024400&v=beta&t=GrDRpTSHy3ppGixCCaxfj_aMjbPTSghpoe3no6Ilqyc');
   background-size: cover;
   text-align: center;
   padding: 10rem;
@@ -229,14 +229,14 @@
 }
 
 .homeWrapper{
-  background-image: url('https://i.imgur.com/PSF02hd.png');
-  background-color: rgb(247, 113, 3);
+  background-image: url('https://samsfamoussalsa.com/wp-content/uploads/2020/08/sams-salsa-tabletop.jpg');
+  background-color: rgb(255, 115, 0);
   background-repeat: no-repeat;
-  padding-top: 50vh;
+  padding-top: 30vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
 .homePageTextWrapper {
@@ -277,6 +277,28 @@
   color: rgb(24, 168, 56);
   font-family: Noteworthy;
   font-size: 1.75rem;
+}
+
+.newsletter{
+  background-image: url('https://cdn5.vectorstock.com/i/1000x1000/82/74/delicious-tomato-salsa-with-chips-seamless-pattern-vector-23218274.jpg');
+  text-align: center;
+  padding: 1rem;
+}
+
+.newsletter-title{
+  color: rgb(255, 255, 255);
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 3rem;
+  background-color: #000000;
+  margin-left: 25rem;
+  margin-right: 25rem;
+}
+
+.events {
+  background-color: orange;
+  text-align: center;
+  padding: 1rem;
 }
 
 .welcomeText{
@@ -658,11 +680,8 @@
 }
 
 .accountWrapper{
-  background-image: url('https://img.myloview.com/posters/simple-clean-fresh-yellow-wave-background-design-template-vector-700-199899821.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: rgba(255, 123, 0, .9);
   padding: 2rem;
-  min-height: 50vh;
   margin-left: 12rem;
   margin-right: 12rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .6);
@@ -835,8 +854,9 @@
 }
 
 .errors{
-  color: black;
+  color: white;
   font-family: sans-serif;
-  font-weight: 300;
+  font-weight: bold;
   padding: 1rem;
+  background-color: transparent;
 }
