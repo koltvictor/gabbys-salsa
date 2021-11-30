@@ -476,11 +476,16 @@
 }
 
 ::-webkit-input-placeholder{
-  color:white;
+  color:black;
 }
 
 ::-webkit-input{
-  color:white;
+  color:black;
+  background-color:transparent;
+}
+
+::-webkit-input-active{
+  color:black;
   background-color:transparent;
 }
 
