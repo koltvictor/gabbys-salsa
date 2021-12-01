@@ -32,7 +32,7 @@ export default function Home ({currentUser}){
                     </li>
                 </ul>
             </div>
-            <br/><br/><br/><br/><br/><br/><br/>
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
             <div className="footer">
                 <>
                     info@gabbyssalsa.com<br/>
