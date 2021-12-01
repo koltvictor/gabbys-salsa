@@ -13,22 +13,7 @@ export default function Home ({currentUser}){
             <div className="events">
                 <ul>
                     <li>
-                        DATE TIME EVENT LOCATION
-                    </li>
-                    <li>
-                        DATE TIME EVENT LOCATION
-                    </li>
-                    <li>
-                        DATE TIME EVENT LOCATION
-                    </li>
-                    <li>
-                        DATE TIME EVENT LOCATION
-                    </li>
-                    <li>
-                        DATE TIME EVENT LOCATION
-                    </li>
-                    <li>
-                        DATE TIME EVENT LOCATION
+                        We are always updating our events schedule, but we don't have any upcoming events scheduled at the moment.  Check back soon, though!
                     </li>
                 </ul>
             </div>
