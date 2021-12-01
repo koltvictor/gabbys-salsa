@@ -32,6 +32,15 @@ export default function Home ({currentUser}){
                     </li>
                 </ul>
             </div>
+            <br/><br/><br/><br/><br/><br/><br/>
+            <div className="footer">
+                <>
+                    info@gabbyssalsa.com<br/>
+                    1234 Big Wok Way<br/>
+                    Las Vegas, NV 89117<br/>
+                    © GM Salsa Labs 2021. All rights reserved.
+                </>
+            </div>
         </div>
     )
 }

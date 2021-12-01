@@ -860,3 +860,8 @@
   padding: 1rem;
   background-color: transparent;
 }
+
+.footer{
+  color: white;
+  text-align: right;
+}
